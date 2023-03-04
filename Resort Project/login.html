@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resort in Heaven</title>
+</head>
+
+<body>
+
+    <div class="wall">
+        
+        <div class="siteMenu">
+            <a href="index.html" class="one">Home</a>
+
+            <a href="booking.html" class="two">Booking</a>
+
+            <a href="gallery.html" class="three">Gallery</a>
+            <a href="interest.html" class="four">Interest</a>
+            <a href="about.html" class="five">About</a>
+            <a href="contact.html" class="six">Contact</a>
+
+            <a href="registration.html" class="seven">Registration</a>
+
+            <a href="login.html" class="eight">Login</a>
+           
+        </div>
+        <div class="cancelFloat"></div>
+        <div class="siteLogo">
+            <br>
+            <br>
+            The Great Gatsby Resort
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="name">Login to your Account</div>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="login_me">
+
+        <div class="loginform">
+
+            <form method="post" id="login_form">
+
+                <label class="text">Username</label>
+                <input type="text" class="textbox" id="Username" name="Username">
+
+                <br />
+                <label class="text">Password</label>
+                <input type="password" class="textbox" id="Password" name="Password">
+                <br />
+
+                <input type="submit" class="button" id="btn" value="Login now">
+            </form>
+        </div>
+
+        <div class="registerNew">
+
+            <h2><a href="registration.html">Click here to Register to this Website</a></h2>
+
+        </div>
+
+        <div class="cancelFloat"></div>
+
+    </div>
+
+
+
+    <div class="footer">
+
+       
+        <hr/>
+       
+        <div class="social">
+            
+                <img src="images/Vector/5.png" alt="">
+                <img src="images/Vector/6.png" alt="">
+                <img src="images/Vector/7.png" alt="">
+                <img src="images/Vector/8.png" alt="">
+                <img src="images/Vector/9.png" alt="">
+            </ul>
+            
+            
+        </div>
+        <div class="cancelFloat"></div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script>
+
+        jQuery('#login_form').validate({
+            rules: {
+                Username: {
+                    required: true
+                },
+                Password: {
+                    required: true
+                }
+
+            }, messages: {
+                Username: {
+                    required: "enter username"
+                },
+                Password: {
+                    required: "enter password"
+                }
+            }
+        });
+
+        $(document).ready(function () {
+
+            $("#btn").submit(function (e) {
+                e.preventDefault();
+                if($("#Username").val()=="customer" && $("#Password").val()=="password"){
+                    alert("Valid login details");
+                }   else{
+                    alert("inValid login details");
+                }
+            });
+
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div  class="registCol">
+            <h1>Registration</h1>
+
+            <fieldset class="GenInfo">
+                <legend>General Information</legend>
+
+                <div class="bx1">
+                    <div class="arr1">Arrival Date</div>
+                    <div class="arr2">
+                        <input type="date" id="dte">
+                    </div><span id="errdte"></span>
+
+                <div class="bx1">
+                        <div class="arr1">Nights</div>
+                        <div class="arr2">
+                            <input type="text" required min=0 max=10 id="ngts">
+                </div><span id="errngts"></span>
+
+                <div class="bx1">
+                    <div class="arr1">Adults</div>
+                    <div class="arr2">
+                      <select name="" id="getADT" >
+                          <option >1</option>
+                          <option >2</option>
+                          <option >3</option>
+                          <option >4</option>
+                          <option >5</option>
+                          <option >6</option>
+                          <option >7</option>
+                          <option >8</option>
+                          <option >9</option>
+                          <option >10</option>
+                      </select><span id="errgetADT"></span>
+                </div>
+                </div>
+
+                <div class="bx1">
+                    <div class="arr1">Children</div>
+                    <div class="arr2">
+                      <select name="" id="getChild">
+                          <option >0</option>
+                          <option >1</option>
+                          <option >2</option>
+                          <option >3</option>
+                          <option >4</option>
+                          <option >5</option>
+                          <option >6</option>
+                          <option >7</option>
+                          <option >8</option>
+                          <option >9</option>
+                          <option >10</option>
+                      </select><span id="errgetChild"></span>
+                </div>
+                </div>
+            </fieldset>
+
+
+                <!-- Preferences -->
+
+            <fieldset class="GenInfo">
+                <legend>Preferences</legend>
+
+                <div class="bx1">
+                    <div class="arr1">Room Type</div>
+                    <div class="arr2" id="rd">
+                        Standard <input type="radio"  name="s" value=90 id="standard"> 
+                        Business <input type="radio"  name="s" value=110 id="business"> 
+                        Suite <input type="radio"  name="s" value=125 id="suite">
+                    </div>
+
+                    <div class="bx1">
+                        <div class="arr1">Bed Type</div>
+                        <div class="arr2" id="rd">
+                            King <input type="radio"  name="a" value="king" id="king"> 
+                            Double Double <input type="radio"  name="a" value="Double" id="Double"> 
+                           
+                        </div>
+                    <div class="bx1">
+                            <div class="arr1">
+                                <input type="checkbox" value="smoke" id="Cbox" > Smoking
+                            </div>
+                            
+                               
+                    </div>
+               
+
+               
+            </fieldset>
+
+<!-- Contact Information -->
+            
+            <fieldset class="GenInfo">
+                <legend>Contact Information</legend>
+
+                <div class="bx1">
+                    <div class="arr1">Name</div>
+                    <div class="arr2">
+                        <input type="text" required id="name">
+                    </div><span id="errname"></span>
+
+                <div class="bx1">
+                        <div class="arr1">Email</div>
+                        <div class="arr2">
+                            <input type="email" required id="email">
+                </div><span id="erremail"></span>
+                <div class="bx1">
+                    <div class="arr1">Contact</div>
+                    <div class="arr2">
+                        <input type="text" required id="contact">
+            </div><span id="errcontact"></span>
+
+                
+            </fieldset>
+
+           <input type="submit" onclick="Register();" id="SB" value="Submit Form">
+        </div>
+
+        <div class="allInfo">
+           <h2 id="getall"></h2> 
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

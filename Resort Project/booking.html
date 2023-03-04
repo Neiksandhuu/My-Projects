@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resort in Heaven</title>
+     <!-- This is jquery UI link -->
+   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/flick/jquery-ui.css">
+   <!-- ------------------------- -->
+      
+   <!-- This is the Jquery CDN -->
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   <!-- ------ -->
+   
+   
+   
+   <!-- This is the JqueryUI CDN -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wall">
+        
+        <div class="siteMenu">
+            <a href="index.html" class="one">Home</a>
+
+            <a href="booking.html" class="two">Booking</a>
+
+            <a href="gallery.html" class="three">Gallery</a>
+            <a href="interest.html" class="four">Interest</a>
+            <a href="about.html" class="five">About</a>
+            <a href="contact.html" class="six">Contact</a>
+
+            <a href="registration.html" class="seven">Registration</a>
+
+            <a href="login.html" class="eight">Login</a>
+           
+        </div>
+        <div class="cancelFloat"></div>
+        <div class="siteLogo">
+            The Great Gatsby Resort
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="name">Check Booking</div>
+    <br>
+    <br>
+    <br>
+    <div class="bannerPic">
+        <img src="images/booking.jpg">
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+    <!-- Booking Form  -->
+    <div  class="registCol">
+        <h1>Book Now</h1>
+
+        <fieldset class="GenInfo">
+            <legend>General Information</legend>
+
+            <div class="bx1">
+                <div class="arr1">Arrival Date</div>
+                <div class="arr2">
+                    <input type="date" id="dte">
+                </div><span id="errdte"></span>
+                </div>
+
+            <div class="bx1">
+                    <div class="arr1">Nights</div>
+                    <div class="arr2">
+                        <input type="text" required min=0 max=10 id="ngts">
+            </div><span id="errngts"></span>
+        </div>
+            <div class="bx1">
+                <div class="arr1">Adults</div>
+                <div class="arr2">
+                  <select name="" id="getADT" >
+                      <option >1</option>
+                      <option >2</option>
+                      <option >3</option>
+                      <option >4</option>
+                      <option >5</option>
+                      <option >6</option>
+                      <option >7</option>
+                      <option >8</option>
+                      <option >9</option>
+                      <option >10</option>
+                  </select><span id="errgetADT"></span>
+            </div>
+            </div>
+
+            <div class="bx1">
+                <div class="arr1">Children</div>
+                <div class="arr2">
+                  <select name="" id="getChild">
+                      <option >0</option>
+                      <option >1</option>
+                      <option >2</option>
+                      <option >3</option>
+                      <option >4</option>
+                      <option >5</option>
+                      <option >6</option>
+                      <option >7</option>
+                      <option >8</option>
+                      <option >9</option>
+                      <option >10</option>
+                  </select><span id="errgetChild"></span>
+            </div>
+            </div>
+        </fieldset>
+
+
+            <!-- Preferences -->
+
+        <fieldset class="GenInfo">
+            <legend>Preferences</legend>
+
+            <div class="bx1">
+                <div class="arr1">Room Type</div>
+                <div class="arr2" id="rd">
+                    Diamond   <input type="radio"  name="s" value=90 id="standard"> 
+                    Platinum <input type="radio"  name="s" value=110 id="business"> 
+                    Gold <input type="radio"  name="s" value=125 id="suite">
+                </div>
+            </div>
+
+                <div class="bx1">
+                    <div class="arr1">Bed Type</div>
+                    <div class="arr2" id="rd">
+                        King <input type="radio"  name="a" value="king" id="king"> 
+                        Double Double <input type="radio"  name="a" value="Double" id="Double"> 
+                       
+                    </div>
+                </div>
+                <div class="bx1">
+                        <div class="arr1">
+                            <input type="checkbox" value="smoke" id="Cbox" > Smoking
+                        </div>
+                        
+                           
+                </div>
+           
+
+           
+        </fieldset>
+
+<!-- Contact Information -->
+        
+        <fieldset class="GenInfo">
+            <legend>Contact Information</legend>
+
+            <div class="bx1">
+                <div class="arr1">Name</div>
+                <div class="arr2">
+                    <input type="text" required id="name">
+                </div><span id="errname"></span>
+            </div>
+
+            <div class="bx1">
+                    <div class="arr1">Email</div>
+                    <div class="arr2">
+                        <input type="email" required id="email">
+            </div><span id="erremail"></span>
+        </div>
+
+            <div class="bx1">
+                <div class="arr1">Contact</div>
+                <div class="arr2">
+                    <input type="text" required id="contact">
+        </div><span id="errcontact"></span>
+ </div>
+            
+        </fieldset>
+
+       <input type="submit" onclick="Register();" id="SB" value="Submit Form">
+    </div>
+
+    <div class="allInfo">
+       
+     </div>
+<br>
+<br>
+<br>
+<h2 style="text-align: center;">Get your package ready</h2>
+    <div class="bookingList" >
+       
+         <div id="getall"></div> 
+        <ul id="servList">
+            <h2 style="color:gold;text-align: center;">List of Services your get as per Package</h2>
+        </ul>
+
+        <h3 id="billingAmount"></h3>
+    </div>
+
+    <div class="cancelFloat"></div>
+
+
+
+
+    <div class="footer">
+
+       
+        <hr/>
+       
+        <div class="social">
+            
+                <img src="images/Vector/5.png" alt="">
+                <img src="images/Vector/6.png" alt="">
+                <img src="images/Vector/7.png" alt="">
+                <img src="images/Vector/8.png" alt="">
+                <img src="images/Vector/9.png" alt="">
+            </ul>
+            
+            
+        </div>
+        <div class="cancelFloat"></div>
+    </div>
+
+
+    <script>
+const $ = selector =>document.querySelector(selector);
+let platinum = ["Free Movie for 1 Day", "Sports arena", "Tour Guide", "Free WIFI", "Breakfast", "Lunch", "Dinner"];
+        let gold = ["Sports arena", "Tour Guide", "Free WIFI", "Breakfast", "Lunch", "Dinner"];
+        let silver = ["Free WIFI", "Breakfast", "Dinner"];
+        let amount = 0;
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    document.getElementById("SB").addEventListener("click", Register);
+    document.getElementById("SB").addEventListener("click", genContent);
+      
+})
+        //created the list of services as per packages
+       
+
+        function genContent() {
+            let platinum = ["Free Movie for 1 Day", "Sports arena", "Tour Guide", "Free WIFI", "Breakfast", "Lunch", "Dinner"];
+        let gold = ["Sports arena", "Tour Guide", "Free WIFI", "Breakfast", "Lunch", "Dinner"];
+        let silver = ["Free WIFI", "Breakfast", "Dinner"];
+        let amount = 0;
+
+            let servList = document.getElementById("servList");
+            let service = document.getElementById("services");
+            let content = "";
+            let inc = 0;
+
+            if (document.getElementById("standard").checked) {
+
+
+                amount = 2000;
+
+                for (inc = 0; inc < platinum.length; inc++) {
+                    content += "<li>" + platinum[inc] + "</li>";
+                }
+
+
+            } else if (document.getElementById("business").checked) {
+
+                amount = 1200;
+                for (inc = 0; inc < gold.length; inc++) {
+                    content += "<li>" + gold[inc] + "</li>";
+                }
+
+            }
+            else if (document.getElementById("suite").checked) {
+                amount = 300;
+
+                for (inc = 0; inc < silver.length; inc++) {
+                    content += "<li>" + silver[inc] + "</li>";
+                }
+
+
+            } 
+
+            servList.innerHTML = "<h2>The Available packages are</h2> <br/>"+content;
+
+            
+
+        }
+
+        function Register(){
+    let Email_pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    let current=new Date();
+
+    let dte=$("#dte");
+    let date=new Date(dte.value);
+    let dattte=new Date(dte.value);
+    var numberss = /^[0-9]+$/;
+    
+    let email=$("#email");
+    let name=$("#name");
+    let contact=$("#contact");
+    let ngts=$("#ngts");
+    let nghts=parseInt(ngts.value);
+    let getADT=$("#getADT");
+    let getChild=$("#getChild");
+    let getall=$("#getall");
+
+   
+     let price=1;
+
+    let error=0;
+    let E=true;
+
+    if(dte.value==""){
+        dte.style.border="2px solid red";
+        dte.style.boxShadow="0.5px 0.5px 4px red";
+        errdte.innerHTML=" Enter the Arrival date";
+        error++;
+    }else{
+        errdte.innerHTML="";
+        dte.style.border="2px solid black";
+        dte.style.boxShadow="none";
+        error=0;
+
+        if(date<current){
+            dte.style.border="2px solid red";
+            dte.style.boxShadow="0.5px 0.5px 4px red";
+            errdte.innerHTML=" Do not choose past date";
+            error++;
+
+        }else{
+            errdte.innerHTML="";
+        dte.style.border="2px solid black";
+        dte.style.boxShadow="none";
+        error=0;
+        }
+    }
+
+    if(ngts.value==""){
+        ngts.style.border="2px solid red";
+        ngts.style.boxShadow="0.5px 0.5px 4px red";
+        errngts.innerHTML=" Enter the number of nights"
+        error++;
+    }else{
+        errngts.innerHTML="";
+        ngts.style.border="2px solid black";
+        ngts.style.boxShadow="none";
+        error=0;
+
+        if(ngts.value>10){
+            ngts.style.border="2px solid red";
+            ngts.style.boxShadow="0.5px 0.5px 4px red";
+            errngts.innerHTML=" You can not stay more than 10 days"
+            error++;
+        }else{
+            errngts.innerHTML="";
+        ngts.style.border="2px solid black";
+        ngts.style.boxShadow="none";
+        error=0;
+        }
+    }
+
+    if(name.value==""){
+        name.style.border="2px solid red";
+        name.style.boxShadow="0.5px 0.5px 4px red";
+        errname.innerHTML=" Enter the Name";
+        error++;
+    }else{
+        errname.innerHTML="";
+        name.style.border="2px solid black";
+        name.style.boxShadow="none";
+        error=0;
+    }
+
+    if(contact.value==""){
+        contact.style.border="2px solid red";
+        contact.style.boxShadow="0.5px 0.5px 4px red";
+        errcontact.innerHTML=" Enter the Contact number";
+        error++;
+    }else{
+        errcontact.innerHTML="";
+        contact.style.border="2px solid black";
+        contact.style.boxShadow="none";
+        error=0;
+
+        if(contact.value.match(numberss)){
+        
+            errcontact.innerHTML="";
+            contact.style.border="2px solid black";
+            contact.style.boxShadow="none";
+            error==0;
+
+            if(contact.value.length<10){
+                contact.style.border="2px solid red";
+                contact.style.boxShadow="0.5px 0.5px 4px red";
+                errcontact.innerHTML=" Number must be above 10 digits";
+                error++;
+            }else{
+            errcontact.innerHTML="";
+            contact.style.border="2px solid black";
+            contact.style.boxShadow="none";
+            error==0;
+            }
+            
+        }
+        else{
+           
+            contact.style.border="2px solid red";
+            contact.style.boxShadow="0.5px 0.5px 4px red";
+            errcontact.innerHTML=" Enter number only";
+            error++;
+           
+        }
+       
+    }
+    
+
+
+
+    if(email.value==""){
+        email.style.border="2px solid red";
+        email.style.boxShadow="0.5px 0.5px 4px red";
+        erremail.innerHTML=" Enter the Email Address";
+        error++;
+
+    }else{
+        erremail.innerHTML="";
+        email.style.border="2px solid black";
+        email.style.boxShadow="none";
+        
+
+        if(email.value.match(Email_pattern)){
+            erremail.innerHTML="";
+            email.style.border="2px solid black";
+            email.style.boxShadow="none";
+            error=0;
+        }else{
+           
+
+            email.style.border="2px solid red";
+            email.style.boxShadow="0.5px 0.5px 4px red";
+            erremail.innerHTML=" Enter the Correct email";
+            error++;
+        }
+        error=0;
+    }
+
+    
+
+
+ 
+    if(error>0){
+        getall.innerHTML="";
+    }else{
+       
+        let sum1=[];
+        let sum2=[];
+        let Tsum=0;
+        let arrWD=[];
+
+      
+        date.setDate(date.getDate()+parseInt(ngts.value)-1);
+        
+     
+
+        for(var h=dattte;h<=date;h.setDate(h.getDate()+1)){
+            arrWD.push(new Date(h).getDay());
+            
+        }
+
+        for(var w=0;w<arrWD.length;w++){
+            if(arrWD[w]==5 || arrWD[w]==6){
+                
+                
+                
+            }else{
+                // console.log(arrWD[w]+"these are week days") ;
+              
+            }
+        }
+
+
+
+       
+            if(document.getElementById("standard").checked){
+                for(var w=0;w<arrWD.length;w++){
+                    if(arrWD[w]==5 || arrWD[w]==6){
+                        sum1.push(110);
+                        // console.log(arrWD[w]+"these are weekend days") ;
+                        
+                        
+                    }else{
+                        //  console.log(arrWD[w]+"these are week days") ;
+                        sum2.push(90);
+                    }
+                }
+                
+            }
+           else if(document.getElementById("business").checked){
+                for(var w=0;w<arrWD.length;w++){
+                    if(arrWD[w]==5 || arrWD[w]==6){
+                        sum1.push(125);
+                        // console.log(arrWD[w]+"these are weekend days") ;
+                        
+                        
+                    }else{
+                        // console.log(arrWD[w]+"these are week days") ;
+                        sum2.push(100);
+                    }
+                }
+                
+            }
+           else if(document.getElementById("suite").checked){
+                for(var w=0;w<arrWD.length;w++){
+                    if( arrWD[w]==5 || arrWD[w]==6){
+                        sum1.push(150);
+                        // console.log(arrWD[w]+"these are weekend days") ;
+                        
+                    }else{
+                        // console.log(arrWD[w]+"these are week days") ;
+                        sum2.push(125);
+                    }
+                }
+                
+            }
+        if(document.getElementById("Cbox").checked){
+            sum2.push(25);
+        }
+console.log(sum1);
+console.log(sum2);
+
+
+for(var t=0;t<sum1.length;t++){
+    Tsum+=sum1[t];
+}
+for(var t=0;t<sum2.length;t++){
+    Tsum+=sum2[t];
+}
+
+// console.log(Tsum);
+// console.log(Tsum);
+
+
+
+
+getall.innerHTML=" Your Total Cost for this package is "+Tsum+" with "+ngts.value+" of stay";
+
+
+
+
+
+     
+let booklist=$(".bookingList");
+booklist.style.boxShadow =" 1px 1px 10px black";  
+     
+
+    }
+   
+    }
+    </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</body>
+
+</html>

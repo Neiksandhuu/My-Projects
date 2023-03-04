@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resort in Heaven</title>
+</head>
+
+<body>
+
+    <div class="wall">
+        
+        <div class="siteMenu">
+            <a href="index.html" class="one">Home</a>
+
+            <a href="booking.html" class="two">Booking</a>
+
+            <a href="gallery.html" class="three">Gallery</a>
+            <a href="interest.html" class="four">Interest</a>
+            <a href="about.html" class="five">About</a>
+            <a href="contact.html" class="six">Contact</a>
+
+            <a href="registration.html" class="seven">Registration</a>
+
+            <a href="login.html" class="eight">Login</a>
+            
+        </div>
+        <div class="cancelFloat"></div>
+        <div class="siteLogo">
+            The Great Gatsby Resort
+        </div>
+    </div>
+<br>
+<br>
+<br>
+    <div class="name">Our Amazing Gallery</div>
+    <br>
+    <br>
+    <br>
+    <div class="gallery">
+        <img src="images/images/p1.jpg" id="mainPic">
+        <hr/>
+        <img src="images/images/p1.jpg" class="shortPic">
+        <img src="images/images/p2.jpg" class="shortPic">
+        <img src="images/gallery/3.jpg" class="shortPic">
+        <img src="images/gallery/4.jpg" class="shortPic">
+        <img src="images/images/p3.jpg" class="shortPic">
+        <img src="images/images/p4.jpg" class="shortPic">
+        <img src="images/images/p5.jpg" class="shortPic">
+        <img src="images/images/p6.jpg" class="shortPic">
+        
+    </div>
+    <div class="footer">
+
+       
+        <hr/>
+       
+        <div class="social">
+            
+                <img src="images/Vector/5.png" alt="">
+                <img src="images/Vector/6.png" alt="">
+                <img src="images/Vector/7.png" alt="">
+                <img src="images/Vector/8.png" alt="">
+                <img src="images/Vector/9.png" alt="">
+            </ul>
+            
+            
+        </div>
+        <div class="cancelFloat"></div>
+    </div>
+
+
+    <script>
+        var inc=0;
+        function changePics(){
+            let mainPic=document.getElementById("mainPic");
+            let shortPics=document.getElementsByClassName("shortPic");
+
+            if(inc<shortPics.length){
+                shortPics[inc].style.boxShadow="1px 1px 10px black";
+                mainPic.src=shortPics[inc].src;
+            }
+            
+            
+            inc++;
+            if(inc==shortPics.length+1){
+                inc=0;
+                resetBackground();
+            }
+        }
+
+        function resetBackground(){
+            let shortPics=document.getElementsByClassName("shortPic");
+            
+            for(x=0;x<shortPics.length;x++){
+                
+                    shortPics[x].style.boxShadow="none";
+                
+                
+            }
+            
+        }
+
+
+        let tmr=setInterval(changePics,2000);
+    </script>
+</body>
+
+</html>

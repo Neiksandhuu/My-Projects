@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resort in Heaven</title>
+</head>
+
+<body>
+
+    <div class="wall">
+        
+        <div class="siteMenu">
+            <a href="index.html" class="one">Home</a>
+
+            <a href="booking.html" class="two">Booking</a>
+
+            <a href="gallery.html" class="three">Gallery</a>
+            <a href="interest.html" class="four">Interest</a>
+            <a href="about.html" class="five">About</a>
+            <a href="contact.html" class="six">Contact</a>
+
+            <a href="registration.html" class="seven">Registration</a>
+
+            <a href="login.html" class="eight">Login</a>
+            
+        </div>
+        <div class="cancelFloat"></div>
+        <div class="siteLogo">
+            The Great Gatsby Resort
+        </div>
+    </div>
+<br>
+<br>
+<br>
+    <div class="name">Register to our Website</div>
+
+<br>
+<br>
+<br>
+    <div class="bannerPic">
+        <img src="images/booking.jpg">
+    </div>
+    <div class="register_me">
+        <form class="form" id="register" method="post">
+            <label>First Name</label>
+            <input type="text" class="textbox" name="FirstName">
+            <br />
+            <label>Last Name</label>
+            <input type="text" name="LastName" class="textbox">
+            <br />
+            <label>Address</label>
+            <textarea class="textarea" name="Address"></textarea>
+            <br />
+            <label>Contact Number</label>
+            <input type="text" name="Mobile" class="textbox">
+            <br />
+            <label>Account Type</label>
+            <select name="AccountType" class="selectList">
+                <option>Business</option>
+                <option>Personal</option>
+            </select>
+
+            <label>Business Contact</label>
+            <input type="text" class="textbox" name="BusinessContact">
+            <br />
+            <label>Number of Employees</label>
+            <select name="EmpNumber" class="selectList">
+                <option>Below 5 </option>
+                <option>Above 10</option>
+                <option>Above 50</option>
+                <option>Above 100</option>
+
+            </select>
+
+            <label>Email</label>
+
+            <input type="email" name="Email" class="textbox">
+            <br />
+            <label>Confirm Email</label>
+            <input type="email" name="ConfirmEmail" class="textbox">
+            <br />
+            <label>Password</label>
+            <input type="text" name="Password" id="Password" class="textbox">
+            <br />
+
+            <label>Confirm Password</label>
+            <input type="text" name="ConfirmPassword" id="ConfirmPassword" class="textbox">
+            <br />
+
+            <label>Type this in the below given Textbox</label>
+            <div id="captcha" name="captcha"></div>
+            
+            <input type="hidden" id="captchaContent" name="captchaContent">
+
+            <input type="text" class="textbox" name="CaptchaValue">
+            <br />
+            <input type="submit" value="Register" class="button"> <input type="reset" value="Reset" class="button">
+        </form>
+
+
+    </div>
+
+
+
+    <div class="footer">
+
+       
+        <hr/>
+       
+        <div class="social">
+            
+                <img src="images/Vector/5.png" alt="">
+                <img src="images/Vector/6.png" alt="">
+                <img src="images/Vector/7.png" alt="">
+                <img src="images/Vector/8.png" alt="">
+                <img src="images/Vector/9.png" alt="">
+            </ul>
+            
+            
+        </div>
+        <div class="cancelFloat"></div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script>
+
+        jQuery('#register').validate({
+            rules: {
+                FirstName: "required",
+                LastName: "required",
+                
+                Address: "required",
+                Mobile: "required",
+                Password: {
+                    required: true,
+                    minlength: 8
+                },
+                ConfirmPassword: {
+                    required: true,
+                    equalTo: '#Password'
+                },
+                CaptchaValue: {
+                    required: true,
+                    equalTo: "#captchaContent"
+                },
+                Email: {
+                    required: true,
+                    email: true
+                },
+                ConfirmEmail: {
+                    required: true,
+                    email: true
+                }
+
+            }, messages: {
+                FirstName: "enter first name",
+                LastName: "enter last name",
+                Email: {
+                    required: "enter email",
+                    email: "invalid email address entered"
+                },
+                ConfirmEmail: {
+                    required: "enter confirm email",
+                    email: "invalid email address entered"
+                },
+                Address: "enter address",
+                Mobile: "enter mobile number",
+                Password: {
+                    required: " enter password",
+                    minlength: "enter password above 7 character"
+                },
+                ConfirmPassword: {
+                    required: "enter confirm password",
+                    equalTo: 'confirm password not matching'
+                },
+                CaptchaValue: {
+                    required: "enter captcha value",
+                    equalTo: "Invalid captcha value. Try again..."
+                }
+
+            }
+        });
+
+        
+        $(document).ready(function () {
+
+            let value=Math.floor(Math.random() * 1000000);
+            $("#captchaContent").val(value);
+            $("#captcha").html(value);
+            $("#captchaValue").html(value);
+            
+
+        });
+    </script>
+</body>
+
+</html>

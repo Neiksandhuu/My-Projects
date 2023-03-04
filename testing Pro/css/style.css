@@ -1,0 +1,259 @@
+*{
+    margin:0;
+    padding: 0;
+   
+    
+}
+
+.container1{
+    width:100%;
+    padding-bottom:10px;
+    background-color: #222;
+
+}
+h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    padding:10px;
+    text-align:right;
+    margin-right:10px;
+    color:rgb(243, 228, 14);
+    word-spacing:10px;
+    width: 100%;
+    float:right;;
+    border-bottom: 1px solid rgb(243, 228, 14);
+    
+}
+nav a{
+  
+    text-decoration: none;
+    font-size:20px;
+    color:rgb(243, 228, 14);
+transition: 0.5s;
+
+    
+}
+nav a:hover{
+color: red;
+}
+
+.carouselImage img{
+    width:100%;
+    
+   
+}
+
+.carouselImage{
+    display: inline-flex;
+    margin: auto;
+}
+
+.btn{
+    text-align: center;
+}
+
+.btn button{
+    font-size: 18px;
+    border: 2px solid #222;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 4px;
+    color:white;
+    background-color: #222;
+}
+
+.menusec{
+    font-size: 35px;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    
+   
+
+}
+
+.menu{
+    width: 100%;
+   
+    margin: auto;
+}
+
+#pic,img{
+    width: 99%;
+   margin:10px auto;
+   
+    display: inline-flex;
+   
+}
+
+
+/* contact us section */
+
+.ll7{
+    height:80vh;
+    width:99%;
+    margin-top: -300px;
+    margin-left: 5px;
+  display :inline-flex;
+    border-radius:1em;
+    background:linear-gradient(rgb(255, 230, 1),rgb(248, 133, 2));}
+
+.ll8{border:none;
+height:30vh;
+margin-top:80px;
+float:left;
+margin-left:140px;
+width:30%;}
+
+.ll9{font-size:35px;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+margin-top:2px;
+margin-bottom: 20px;}
+
+.ll9:hover{
+ color:rgb(255, 230, 1);
+ transition: 0.5s;
+}
+
+.mm{border:none;
+ height:6vh;
+ width:100%;
+}
+
+.mm1{color:white;
+ font-size:1em;
+ margin-top:1px;
+float:left;
+margin-left:20px; }
+
+
+.nn{border:none;
+height:65vh;
+float:left;
+margin-top:80px;
+margin-left:30px;
+width:36%;}
+
+.nn3{height:50px;
+width:93%;
+border-radius:10px;
+}
+
+.nn4{height:50px;
+width:93%;
+margin-top:20px;
+border-radius:10px;}
+
+.nn5{height:90px;
+width:93%;
+margin-top:20px;
+border-radius:10px;}
+
+.nn6{border:none;
+height:30px;
+width:20%;
+margin-top:30px;
+margin-left:10px; 
+border-radius:10px;
+font-size:20px;
+text-align:center;
+padding:4px;
+color:red;
+font-family:Arial, Helvetica, sans-serif;
+background-color: white;
+transition: 0.5s; }
+
+.nn6:hover{color:white;
+   background-color:red;}
+
+
+
+   /* Registration Page */
+
+.form{
+    width:75%;
+    border:4px solid rgb(243, 228, 14);
+    background-color: white;
+    border-radius: 30px;
+    margin: auto;
+    padding:15px;
+}
+
+.form input,select{
+   
+    width:60%;
+    padding:3px;
+    margin: 6px;
+    font-size: 20px;
+  
+    border-radius: 6px;
+}
+
+.form p{
+   
+    margin: 6px;
+    font-size: 20px;
+}
+
+.form p span{
+    display: inline-block;
+   
+    width:200px;
+}
+
+.form button{
+    background-color: rgb(243, 228, 14);
+    color:red;
+    display: inline-block;
+    font-size:18px;
+    width:20%;
+   margin:5px;
+   padding: 2px;
+    border:2px solid rgb(243, 228, 14);
+    border-radius: 10px;
+
+}
+
+.rigbtn{
+    display: block;
+    text-align: center;
+}
+
+.err{
+    color:red;
+}
+
+
+/* cardd */
+
+.card{
+    float:left;
+    margin: 20px 140px;
+   /* box-shadow: 2px 2px 2px white; */
+   margin-bottom: 200px;
+   background-color: red;
+   /* display: inline-flex; */
+   color:white;
+}
+
+.card img{
+   
+    width:100%;
+    border-radius: 250px;
+    display: inline-flex;
+}
+
+.card-title{
+    text-align: center;
+}
+
+#myBtn{
+    display: block;
+    text-align: center;
+    margin: auto;
+}

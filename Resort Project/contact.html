@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resort in Heaven</title>
+</head>
+
+<body>
+
+    <div class="wall">
+        
+        <div class="siteMenu">
+            <a href="index.html" class="one">Home</a>
+
+            <a href="booking.html" class="two">Booking</a>
+
+            <a href="gallery.html" class="three">Gallery</a>
+            <a href="interest.html" class="four">Interest</a>
+            <a href="about.html" class="five">About</a>
+            <a href="contact.html" class="six">Contact</a>
+
+            <a href="registration.html" class="seven">Registration</a>
+
+            <a href="login.html" class="eight">Login</a>
+            
+        </div>
+        <div class="cancelFloat"></div>
+        <div class="siteLogo">
+            The Great Gatsby Resort
+        </div>
+    </div>
+
+    <div class="name">Contact us here</div>
+
+    <div class="bannerPic">
+        <img src="images/contact_us.jpg">
+    </div>
+
+
+    <div class="contact_me">
+        <form class="form" id="contact" method="post">
+            <label for="FirstName" class="text">First Name</label>
+            <input type="text" class="textbox" name="FirstName">
+            <br />
+            <label for="LastName" class="text">Last Name</label>
+            <input type="text" class="textbox" name="LastName">
+            <br />
+            <label for="Email" class="text">Email</label>
+            <input type="email" class="textbox" name="Email">
+            <br />
+            <label for="ContactNumber" class="text">Contact Number</label>
+            <input type="text" class="textbox" name="ContactNumber">
+            <br />
+
+            <label for="Message" class="text">Message or Query</label>
+            <textarea name="Message" class="textarea"></textarea>
+            <br />
+
+
+            <input type="submit" class="button" value="submit">
+
+        </form>
+
+
+    </div>
+
+
+
+    <div class="footer">
+
+        <div class="name">The Greate Gatsby Resort</div>
+        <hr />
+        <div class="location">
+            <h1>Visit Us</h1>
+            <div class="mid3">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13728.336147984866!2d75.8506132!3d30.659762!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4ef5ee8d217db4eb!2sCanadian%20Prince%20Resort!5e0!3m2!1sen!2sin!4v1650001350573!5m2!1sen!2sin"></iframe>
+            </div>
+           
+        </div>
+        <div class="social">
+            
+            <img src="images/Vector/5.png" alt="">
+            <img src="images/Vector/6.png" alt="">
+            <img src="images/Vector/7.png" alt="">
+            <img src="images/Vector/8.png" alt="">
+            <img src="images/Vector/9.png" alt="">
+        </ul>
+        
+        
+    </div>
+        <div class="cancelFloat"></div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script>
+       
+        jQuery('#contact').validate({
+            rules: {
+                FirstName: "required",
+                LastName: "required",
+                Email: {
+                    required: true,
+                    email: true
+                },
+                ContactNumber:{
+                    required: true,
+                    number:true
+                },
+                Message: "required"
+
+            }, messages: {
+                FirstName: "Enter first name",
+                LastName: "Enter last name",
+                Email: {
+                    required: "Enter email",
+                    email: "Email address invalid"
+                },
+                ContactNumber: {
+                    required:"Enter contact number",
+                    number:"Enter numeric character only",
+                },
+                Message: "Comment required"
+                
+                
+
+            }
+        });
+    </script>
+</body>
+
+</html>

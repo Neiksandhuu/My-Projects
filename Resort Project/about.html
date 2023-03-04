@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resort in Heaven</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+
+    <div class="wall">
+        
+        <div class="siteMenu">
+            <a href="index.html" class="one">Home</a>
+
+            <a href="booking.html" class="two">Booking</a>
+
+            <a href="gallery.html" class="three">Gallery</a>
+            <a href="interest.html" class="four">Interest</a>
+            <a href="about.html" class="five">About</a>
+            <a href="contact.html" class="six">Contact</a>
+
+            <a href="registration.html" class="seven">Registration</a>
+
+            <a href="login.html" class="eight">Login</a>
+           
+        </div>
+        <div class="cancelFloat"></div>
+        <div class="siteLogo">
+            The Great Gatsby Resort
+        </div>
+    </div>
+<br>
+<br>
+<br>
+    <div class="name">About us</div>
+
+    <div class="about">
+
+        <h2 style="color:black">We're gonna make this place your home</h2>
+<br>
+<br>
+<br>
+        <img src="images/gallery/luxary.jpg">
+        <p>
+            The Greate Gatsby Resort is the combination of innovative design and crafted luxury and set apart by an
+            unprecedented level of personalised hospitality, private spaces and bespoke journeys. Here, We Combine
+            comfort, personalized service and exceptional values. The Hill View Resort offering so many Rooms, Gym
+            Facilities and many more Facilities and it is ideally situated in Canada
+            Ringroad.
+        </p>
+
+        <img src="images/ban.PNG">
+
+    </div>
+    <br>
+    <br>
+    <br>
+<h1 style="text-align: center;" >Our Customer Reviews</h1>
+    <div class="card" style="width: 18%;border:none;">
+        <img src="images/images/g 1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dwayne Johnson</h5>
+          <p class="card-text">This is a fabulous restraunt I even seen, great taste with and proper cleaningness is maintained here.</p>
+         
+        </div>
+      </div>
+
+      <div class="card" style="width: 18%;border:none;">
+        <img src="images/images/g2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Robert Downey</h5>
+          <p class="card-text">I love the customer service of this restraunt, orders are prepared very quickly.</p>
+          
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18%;border:none;">
+        <img src="images/images/g3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Chris Hemsworth</h5>
+          <p class="card-text">The staff members are very friendly, listen  customer and take care of their taste.</p>
+         
+        </div>
+      </div>
+      <div class="cancelFloat"></div>
+      <div class="footer">
+
+       
+        <hr/>
+       
+        <div class="social">
+            
+                <img src="images/Vector/5.png" alt="">
+                <img src="images/Vector/6.png" alt="">
+                <img src="images/Vector/7.png" alt="">
+                <img src="images/Vector/8.png" alt="">
+                <img src="images/Vector/9.png" alt="">
+            </ul>
+            
+            
+        </div>
+        <div class="cancelFloat"></div>
+    </div>
+
+
+    <script>
+        var inc = 0;
+        function changePics() {
+            let mainPic = document.getElementById("mainPic");
+            let shortPics = document.getElementsByClassName("shortPic");
+
+            if (inc < shortPics.length) {
+                shortPics[inc].style.backgroundColor = "yellow";
+                mainPic.src = shortPics[inc].src;
+            }
+
+
+            inc++;
+            if (inc == shortPics.length + 1) {
+                inc = 0;
+                resetBackground();
+            }
+        }
+
+        function resetBackground() {
+            let shortPics = document.getElementsByClassName("shortPic");
+
+            for (x = 0; x < shortPics.length; x++) {
+
+                shortPics[x].style.backgroundColor = "black";
+
+
+            }
+
+        }
+
+
+        let tmr = setInterval(changePics, 100);
+    </script>
+</body>
+
+</html>

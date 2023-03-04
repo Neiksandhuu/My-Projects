@@ -1,0 +1,1012 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+.container1{
+    width: 100%;
+   
+    background-color:black;
+    animation-name: changeBack;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.wall{
+    
+    background-image: url('../images/images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 30vw;
+    display: inline-block;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+.siteLogo{
+    
+    text-shadow: 0px 0px 10px black;
+    text-align: center;
+    
+    font-size: 4vw;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    height:100px;
+    margin-top: 3%;
+    margin-right: 2px;
+}
+.cancelFloat{
+    clear:both;
+}
+
+.siteMenu{
+    height:80px;
+    padding-right: 30px;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+    word-spacing: 1.5vw;
+    color:white;
+
+}
+
+.siteMenu a{
+    padding:2px;
+    text-decoration: none;
+    
+   display: inline-block;
+    color:white;
+   
+   
+}
+.siteMenu a:hover{
+    border-bottom: 1px solid gold;
+    text-decoration: none;
+    
+}
+
+.topLeft{
+    
+    margin:-1% 8%;
+    width: 30%;
+   
+    padding:10px;
+    display: inline-block;
+    color:white;
+    
+    
+}
+.topRight{
+    margin:5% 2%;
+    width: 45%;
+    display: inline-block;
+    padding:10px;
+    
+}
+.topRight img{
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: -10%;
+   
+}
+
+.bxes{
+    display: inline-block;
+    
+    width:100%;
+}
+.topRight img{
+    width: 100%;
+    height:500px;
+}
+.topLeft img{
+    width: 100%;
+    height:300px;
+}
+
+.topLeft h2{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+.mid{
+    margin-top:20px;
+    color:white;
+    width: 100%;
+    display: inline-block;
+}
+
+.mid h2{
+    padding-top:100px;
+    font-size:2.5vw;
+}
+
+.mid p{
+    font-size: 1vw;
+   
+}
+
+.mid img{
+    width: 40%;
+    
+    float:left;
+    margin-left: 3%;
+    margin-right: 1%;
+}
+
+img{
+    border-radius: 15px;
+}
+
+.mid2{
+    margin-top:20px;
+    color:white;
+    width: 100%;
+    display: inline-flex;
+}
+.miid{
+    width:49%;
+   
+    display: inline-block;
+    text-align: center;
+    
+}
+.mid2 h2{
+    margin-top: 3%;
+    padding-top:100px;
+    font-size: 2.5vw;
+}
+
+.mid2 p{
+    font-size: 1vw;
+}
+
+.mid2 img{
+    width: 90%;
+    display: inline-block;
+    
+    
+    margin-left: 3%;
+    margin-right: 1%;
+}
+/* Accordian--- */
+.roomms{
+    display: block;
+    width:95%;
+    transition: 1s;
+    margin: auto;
+  
+}
+#accordion h3{
+    text-align: center;
+    font-size: 1.2vw;
+}
+.roomms img{
+   width: 30%;
+  margin-left:2%;
+    display: inline-block;
+  
+    
+}
+
+#accordian{
+    margin-left:-20%;
+}
+
+.roomms:hover{
+    transform: scale(1.1);
+}
+
+
+/* vector icon */
+
+.icon img{
+    width:5%;
+    margin-left:15.5% ;
+    transition: 1s;
+}
+.icon img:hover{
+    transform: scale(1.6); 
+}
+
+/* footer */
+footer{
+    width:100%;
+}
+.social{
+    display: inline-flex;
+  align-items: stretch;
+  margin: auto;
+  width: 30%;
+  
+ 
+    
+}
+.social img{
+    width:7%;
+  align-items: center;
+display: list-item;
+    transition: 1s; 
+   margin-right:6%;
+   margin-left:6%;
+  justify-content: center;
+   
+}
+
+
+
+/* Booking Page */
+
+.registCol h1{
+    text-align: center;
+}
+.registCol{
+    
+    width:60%;
+    margin: auto;
+    padding: 15px;
+    border-radius:20px;
+    box-shadow: 1px 1px 10px black;
+}
+fieldset{
+    padding: 10px;
+    border-radius:20px;
+    border:2px solid black;
+    margin: 10px;
+}
+
+ .GenInfo legend{
+    font-size:20px;
+    color: aqua;
+
+}
+.arr1{
+    display: inline-flex;
+    width:15%;
+    margin: 3px;
+}
+.arr2{
+    display: inline-flex;
+    width:30%;
+   
+}
+.registCol input[type=text],select,input[type=date],input[type=email]{
+    width:100%;
+}
+input[type=radio]{
+    margin-right: 35px;
+}
+.bx1{
+    font-size: 18px;
+}
+
+#SB{
+    margin:12px;
+    background-color: brown;
+    color:antiquewhite;
+    font-size: 18px;
+    border: none;
+    padding:5px;
+    border-radius: 8px;
+}
+.bx1 span{
+    color:blue;
+}
+
+.bookingList h2{
+    border:5px solid red;
+    border-radius: 20px;
+    padding:15px;
+    margin:20px auto;
+    width:70%;
+    display: none;
+    background-color: #222;
+    color:white;
+}
+/* --------------------------- */
+
+
+
+.name{
+    margin:auto 1.5%;
+    font-size: 3vw;
+    text-align: center;
+    color:black;
+}
+
+/* ////////////////////////// */
+.siteTagline{
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 4px black;
+    color:white;
+}
+
+
+
+
+.mid3 iframe{
+    
+    width: 80%;
+    height:15vw;
+    display: inline-block;
+    padding: 10px;
+    
+}
+
+/* Card */
+.card{
+    float:left;
+     margin: 2% 7%; 
+   /* box-shadow: 2px 2px 2px white; 
+   margin-bottom: 200px; */
+  
+   /* display: inline-flex; */
+   color:black;
+   border:none;
+
+   padding:5px;
+}
+
+.card img{
+   
+    width:100%;
+    border-radius: 250px;
+    display: inline-flex;
+    box-shadow: 1px 1px 10px black;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.card-text{
+    margin-top: -5%;
+    font-size: 1vw;
+}
+/* ---------- */
+
+.footer{
+    
+    text-align: center;
+    
+}
+
+
+.gallery{
+    margin:3px;
+   
+    padding:3px;
+    text-align: center;
+}
+
+#mainPic{
+    width: 95%;
+    height:45vw;
+    box-shadow: 1px 1px 10px black;
+}
+
+.shortPic{
+    width: 9%;
+    height:5vw;
+    margin:0.5%;
+    padding:10px;
+    border:2px solid white;
+    border-radius: 20px;
+}
+
+
+
+.contact_me{
+    
+    width: 50%;
+    box-shadow: 1px 1px 10px white;
+    margin:auto;
+    margin-top:2%;
+    padding:20px;
+}
+
+
+.text{
+    padding:10px;
+    color:wheat;
+    font-size: 20px;
+}
+
+.textbox{
+    width: 100%;
+    margin:10px;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.button{
+    margin:20px;
+    padding:8px;
+    font-size:1.2vw;
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    border:none;
+    transition: 0.5s;
+    
+}
+.button:hover{
+    background-color: azure;
+    color:black;
+    border: 1px solid black;
+}
+
+
+.textarea{
+    width: 100%;
+    height:150px;
+    margin:10px;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.error{
+    padding:10px;
+    color:red;
+}
+
+
+.register_me{
+    
+    width: 600px;
+    box-shadow: 1px 1px 10px white;
+    margin:auto;
+    margin-top:20px;
+    padding:20px;
+}
+
+
+
+.register_me label{
+    padding:10px;
+    color:wheat;
+    font-size: 20px;
+}
+
+
+.selectList{
+    width: 104%;
+    margin:10px;
+    padding:10px;    
+}
+
+
+
+
+.register_me .error{
+    padding:10px;
+    color:red;
+    font-size: 16px;
+}
+
+
+#captcha{
+    padding:20px;
+    text-align: center;
+    font-size: 2vw;
+    color:black;
+}
+
+
+.loginform{
+    margin-top: 20px;
+    width:500px;
+    padding:30px;
+    margin-left:200px;
+    float:left;
+    
+    box-shadow: 1px 1px 10px white;
+
+}
+
+
+
+.registerNew{
+    width:500px;
+    padding:10px;
+    margin-left:10px;
+    float:left;
+    font-size:40px;
+    
+    text-align: center;
+}
+
+.registerNew a{
+    color:white;
+    text-decoration: none;
+}
+
+.registerNew a:hover{
+    color:red;
+}
+
+.error{
+    padding:10px;
+    color:red;
+}
+
+
+.about{
+    padding:20px;
+    text-align: center;
+}
+
+.about img{
+    border-radius: 20px;
+    width: 100%;
+    display: inline;
+}
+
+.about h2{
+    font-size: 2.5vw;
+    color:wheat;
+    
+    text-decoration: underline;
+}
+
+.about p{
+    margin-top:20px;
+    font-size: 1.2vw;
+    color:black;
+    margin-bottom:20px;
+  box-shadow: 1px 1px 10px black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.images{
+    text-align: center;
+}
+/* Interest Page design */
+.containner{
+width:100%;
+display: inline-flex;
+
+}
+
+.imagegall{
+    width:80%;
+    margin: auto;
+    display: inline-block;
+    
+}
+.imagegall .singimg img{
+    width:50%;
+    
+    float: left;
+    border-radius: 0;
+}
+
+.images img{
+    width: 300px;
+    height:300px;
+    padding:10px;
+    margin:10px;
+    border: 1px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all 1s;
+}
+
+.images img:hover{
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rosybrown;
+}
+
+.boxes{
+    margin:auto;
+    width: 55%;
+    padding-left:13%;
+    padding-right:10%;
+    display: block;
+    
+
+}
+.boxes div{
+    width: 40%;
+    text-align: center;
+    padding:10px;
+    margin:2%;
+    float:left;
+    color:gold;
+    font-size:30px;
+    height:80px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.637);
+    transition: all 1s;
+}
+
+
+.boxes div:hover{
+    background-color: white;
+    color:red;
+    box-shadow: 1px 1px 10px black;
+    transform: scale(1.2);
+}
+
+
+
+/* Animation working */
+
+
+@keyframes changeBack {
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: rgb(1, 1, 57);
+    }
+}
+
+.animText{
+    animation-name: animationText;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}   
+
+@keyframes animationText {
+    from{
+        font-weight: bold;
+        background-color: rgb(0, 0, 0);
+    }   
+    to{
+        font-weight: bold;
+        border-radius: 50%;
+        background-color: rgb(255, 0, 0);
+    }
+}
+
+
+.bookingForm{
+    width: 600px;
+    box-shadow: 1px 1px 10px white;
+    margin-left:100px;
+    margin-top:20px;
+    padding:20px;   
+    float:left;
+}
+
+.bookingList{
+    width: 40%;
+   
+    margin:10px auto;
+    padding:20px;   
+    display: block;
+   border-radius: 10px;
+
+}
+
+.bookingList div{
+    color:gold;
+    display: block;
+   
+    width:100%;
+    font-size: 1.5vw;
+    text-align: center;
+    
+}
+
+.redText{
+    font-size: 14px;
+    color:rgb(242, 58, 58);
+}
+
+
+#servList{
+    color:gold;
+    display: block;
+    width:100%;
+    align-items: center;
+   
+   
+    font-size: 18px;
+}
+
+#billingAmount{
+    font-size: 30px;
+    color:rgb(136, 241, 183);
+}
+.bannerPic{
+    display: inline-block;
+    width: 100%;
+    
+}
+
+.bannerPic img{
+    width: 90%;
+    display: block;
+    margin: auto;
+    
+}
+
+.designers{
+    margin-top:20px;
+
+}
+
+.designers h1{
+    text-align: center;
+    font-size: 40px;
+    color:antiquewhite;
+}
+
+.circle{
+    float:left;
+    margin:10px;
+    width: 15%;
+    padding:20px;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.circle strong{
+    font-size:28px;
+    font-weight: bolder;
+    color:rgba(255, 99, 71, 0.874);
+}
+
+.circle label{
+    font-size:18px;
+    font-weight: bolder;
+    color:wheat;
+}
+.circle:hover{
+    background-color: rgb(194, 129, 255);
+    border-radius: 50%;
+    color:white;
+
+}
+
+.circle:hover strong{
+    color:black;
+
+}
+
+.circle:hover label{
+    color:black;
+    
+}
+
+
+
+/* media queries */
+
+@media (max-width: 768px) {
+
+    .siteLogo {
+        font-size: 2em;
+        height: 0px;
+    }
+
+    .siteMenu ul {
+        width: 100%;
+        border: 2px solid black;
+        background-color: black;
+    }
+
+    .wall {
+        height: 50vw;
+    }
+    .siteMenu{
+        font-size: 15px;
+        display: block;
+        text-align: center;
+        word-spacing: 0.2vw;
+    }
+    .siteMenu ul li {
+
+        padding: 20px;
+        background-color: wheat;
+        display: block;
+        width: 100%;
+        font-size: px;
+        margin-bottom: 20px;
+        
+    }
+
+    .topLeft {
+        text-align: center;
+        margin-left: 0px;
+        width: 90%;
+    }
+
+    .topRight {
+        text-align: center;
+        margin-left: 0px;
+        width: 90%;
+       
+    }
+    .topRight img{
+        height:50vw;
+    }
+
+    .mid {
+        text-align: center;
+        margin-left: 0px;
+        width: 96%;
+        float: none;
+        padding: 10px;
+    }
+
+    .mid img {
+        width: 100%;
+    }
+
+    .mid2 {
+        float: none;
+        padding: 10px;
+        text-align: center;
+        margin-left: 0px;
+        width: 96%;
+    }
+
+    .mid2 img {
+        width: 100%;
+    }
+
+    .circle{
+        margin:0px;
+        margin-bottom:10px;
+        width: 100%;
+        clear:both;
+    }
+    .footer div{
+        width: 100%;
+        clear:both;
+        margin:0px;
+        padding:0px;
+    }
+
+    .bookingForm,.bookingList{
+        clear:both;
+        width: 95%;
+        margin:0px;
+        
+    }
+
+    
+    .shortPic{
+        width: 30%;
+        height:12vw;
+        
+    }
+    .boxes div{
+        width: 60%;
+        font-size:20px;
+    }
+
+    .boxes{
+        width: 30%;  
+        margin:auto;
+    }
+    .name{
+        margin-top:50px;
+    }
+.card{
+    float:none;
+    margin:auto
+}
+    .interest{
+        width: 100%;
+    }
+    .images{
+        width: 95%;
+    }
+
+    .contact_me{
+        width: 100%;
+        padding:0px;
+        margin:0px; 
+    }
+
+    .textbox{
+        width: 90%;
+    }
+    .textarea{
+        width: 90%;
+    }
+
+    
+    .loginform{
+        margin:auto;
+        width: 95%;
+        clear:both;
+        padding:10px;
+        margin-bottom:20px;
+        margin-left:10px;
+        
+
+    }
+
+    .registerNew{
+        width: 100%;
+        
+    }
+}
+
+@media (min-width: 769px) and (max-width:1078px) {
+    .siteLogo {
+        font-size: 3em;
+        height: 0px;
+    }
+
+    .siteMenu ul li {
+
+        padding: 5px;
+        margin: 0px;
+        font-size: 24px;
+        margin-bottom: 20px;
+
+    }
+
+    .topLeft {
+        text-align: center;
+        margin-left: 0px;
+        width: 98%;
+    }
+
+    .topRight {
+        text-align: center;
+        margin-left: 0px;
+        width: 98%;
+    }
+
+    .mid {
+        text-align: center;
+        margin-left: 0px;
+        width: 96%;
+        clear:both;
+        padding: 10px;
+    }
+
+    .mid img {
+        width: 100%;
+    }
+
+    .mid2 {
+        clear:both;
+        padding: 10px;
+        text-align: center;
+        margin-left: 0px;
+        width: 96%;
+    }
+
+    .mid2 img {
+        width: 100%;
+    }
+
+    .footer div{
+        width: 100%;
+        clear:both;
+    }
+
+    .loginform{
+        margin:auto;
+        width: 95%;
+        clear:both;
+        padding:10px;
+        margin-bottom:20px;
+        margin-left:10px;
+        
+
+    }
+
+    .registerNew{
+        width: 100%;
+        
+    }
+
+    
+}
