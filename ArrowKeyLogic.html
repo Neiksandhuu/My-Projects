@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #ok{
+        border:2px solid black;
+        height:100px;
+        width:100px;
+        position:relative;
+    }
+
+    #ok1{
+        border:2px solid black;
+        height:200px;
+        width:200px;
+        position:relative;
+        top:200px;
+        left:400px;
+    }
+</style>
+<body>
+    <p id="val1"></p>
+  <p id="val2"></p>
+    
+    <h1 id="myHeading"></h1>
+    <div id="ok1"></div>
+    <div id="ok"></div>
+   
+    
+
+
+    <script>    
+    
+    var input = document.getElementById("myInput");
+    var ok = document.getElementById("ok");
+    var val1 = document.getElementById("val1");
+    var val2 = document.getElementById("val2");
+
+    
+    document.onkeydown = checkKey;
+
+    var x=0;
+    var y=0;
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+       x=x-10;
+       ok.style.top=x+"px";
+      
+       
+        
+    }
+    else if (e.keyCode == '40') {
+        x=x+10;
+        ok.style.top=x+"px";
+       
+    }
+    else if (e.keyCode == '37') {
+        y=y-10;
+        ok.style.left=y+"px";
+       
+    }
+    else if (e.keyCode == '39') {
+        y=y+10;
+        ok.style.left=y+"px";
+        
+    }
+
+   
+ if(x>-110 && x<210){
+     if(y>290 && y<610){
+        ok.style.display="none";
+        ok1.style.display="none";
+     }
+}
+    
+}</script>
+
+
+</body>
+
+</html>
