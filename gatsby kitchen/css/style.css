@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background: black;
+}
+
+.logo{
+    display: flex;
+    padding-left: 30px;
+}
+
+.navbar{
+    display: flex;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+
+.nav-list{
+    width: 70%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 26px 30px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'ubuntu',sans-serif;
+}
+
+.nav-list li a:hover{
+    text-decoration: none;
+    color: yellow;
+}
+
+.rightnav{
+   width: 30%;
+   display: flex;
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: yellow;
+    background-color: black;
+    align-items: center;
+}
+
+.rightnav .cn{
+    width: 160px;
+    height: 40px;
+    background: yellow;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.rightnav .cn a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+
+}
+
+.cn:hover{
+    background-color: #fff;
+
+}
+
+.section{
+    background-color: black;
+}
+
+.home{
+    background-color: black;
+    padding-top: 180px;
+    display: flex;
+}
+
+.content{
+    background-color: black;
+    padding-left: 150px;
+    width: 50%;
+}
+
+.slide_show{
+    width: 50%;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color: white;
+}
+
+.content h1{
+    font-family:cursive;
+    font-size: 50px;
+    color: yellow;
+}
+
+.content h4{
+    font-family: cursive;
+    font-size: 20px;
+    color: white;
+}
+
+.content .cnn{
+    width: 160px;
+    height: 40px;
+    background: yellow;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+
+.content .cnn a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+
+}
+
+.content .cnn:hover{
+    text-decoration: none;
+    background-color: #fff;
+}
+
+
+.menu{
+    padding-top: 160px;
+    font-family: cursive;
+    color:white;
+    background: black;
+    font-size: 25px;
+}
+
+.menu .heading{
+    font-family:cursive;
+    font-size: 50px;
+    color: yellow;
+}
+
+.contact{
+    padding-top: 160px;
+    font-family: cursive;
+    color: white;
+    background-color: black;
+    font-size: 50px;
+}
+
+.find{
+    background-color: black;
+    padding-left: 150px;
+    padding-top: 60px;
+}
+
+.find .add{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color: white;
+}
+
+.find h1{
+    font-family:cursive;
+    font-size: 50px;
+    color: yellow;
+}
+
+.find .open{
+    font-family:cursive;
+    font-size: 30px;
+    color: yellow;
+    padding-left: 20px;
+}
+
+.find .btnf{
+    width: 160px;
+    height: 40px;
+    background: yellow;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+
+.find .btnf a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+
+}
+
+.find .btnf:hover{
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.main{
+    width: 100%;
+    background-color: black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.Registration{
+    text-align: center;
+}
+
+.form h1{
+    text-align: center;
+    font-family: cursive;
+    font-size: 70px;
+    color: yellow;
+    padding-bottom: 90px;
+}
+
+.form input{
+    width: 200px;
+    height: 25px;
+    background: white;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+#email{
+    margin-left: 166px;
+}
+
+#cemail{
+    margin-left: 100px;
+}
+
+#firstname{
+    margin-left: 128px;
+}
+
+#lastname{
+    margin-left: 127px;
+}
+
+#street{
+    margin-left: 166px;
+}
+
+#provinceCode{
+    margin-left: 80px;
+}
+
+#birth{
+    margin-left: 89px;
+}
+
+input, select{
+    height: 25px;
+    width: 150px;
+    margin: 5px;
+    margin-top: 30px;
+}
+
+.form input:focus{
+    outline: none;
+
+}
+
+label{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-right: 30px;
+}
+.Registration .buton_r{
+    display: flex;
+    margin-left: 500px;
+    padding-top: 70px;
+}
+
+.buton_r .btnr{
+        width: 250px;
+        height: 40px;
+        background: yellow;
+        border: none;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .4s ease;
+    
+}
+
+.buton_r .btnr a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+
+}
+
+.buton_r .btnr:hover{
+    text-decoration: none;
+    background-color: #fff;
+}
+
+
+.button{
+        width: 150px;
+        height: 40px;
+        background: yellow;
+        border: none;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 10px;
+    cursor: pointer; 
+}
+    
+
+td{
+    font-size: 30px;
+    font-style: inherit;
+}
+    
+.k1{
+    background-color: black;
+    display: flex;
+}
+
+.k1 .k2{
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+}
+
+.k1 .k3{
+    background-color: black;
+    padding-left: 100px;
+}
+
+.k1 .k4{
+    background-color: black;
+    color: white;
+    padding-left: 100px;
+}
+
+span{
+    color: white;
+}
+
+footer{
+    background: linear-gradient(to bottom, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
+    color: #000;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 0px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

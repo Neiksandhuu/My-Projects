@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="css/style.css">
+    <script src="register_validation.js"></script>
+    <title>Gatsby’s Kitchen</title>
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="images/logo.png" alt="Gatsby’s Kitchen" height="150px" width="150px"></div>
+            <li><a href = "home.html">Home</a></li>
+            <li><a href = "home.html">Pages</a></li>
+            <li><a href = "home.html">Contact Us</a></li>
+            <li><a href = "home.html">Blog</a></li>
+            <li><a href = "home.html">Landing</a></li>
+        </ul>
+        <div class="rightnav">
+            <h4><a style ="text-decoration:none; color:yellow "href="login.html" target="_blank">Log in / Registration</h4></a>&emsp;|&emsp;
+            <button class="cn"><a href="book.html" target="_blank">Book Table</a></button>
+        </div>
+    </nav>
+   
+<div class="main">
+    <div class="form">
+        <h1>Register Here</h1>
+        <div class = "Registration">
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" type="text" >
+            <span>*</span>
+        </div>
+        <div>
+            <label for="cemail">Confirm Email:</label>
+            <input id="cemail" type="text" name="cemail">
+            <span>*</span>
+        </div>
+        <div>
+            <label for="firstname">First Name:</label>
+            <input id="firstname" type="text" name="firstname">
+            <span>*</span>
+        </div>
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input id="lastname" type="text" name="lastname">
+            <span>*</span>
+        </div>
+        <div>
+            <label for="street">Street:</label>
+            <input id="street" type="text" name="street">
+            <span>*</span>
+        </div>
+        <div>
+            <label for="provinceCode">Province Code:</label>
+            <select id="provinceCode">
+                <option value="BC">BC</option>
+                <option value="ON">ON</option>
+                <option value="NS">NS</option>
+                <option value="QC">QC</option>
+                <option value="PE">PE</option>
+                <option value="MB">MB</option>
+                <option value="AB">AB</option>
+                <option value="NB">NB</option>
+                <option value="SK">SK</option>
+                <option value="NT">NT</option>
+                <option value="YT">YT</option>
+                <option value="NL">NL</option>
+                <option value="NU">NU</option>
+            </select>
+            <span>*</span>
+        </div>
+        <br>
+        <div>
+            <label for="postalcode">Canadian Postal Code:</label>
+            <input id="postalcode" type="text" name="postalcode">
+            <span>*</span>
+        </div>
+        <div>
+            <label for="birth"> Date of Birth:</label>
+            <input id="birth" type="text" name="birth">
+            <span>*</span>
+        </div>
+        
+        <div class="buton_r ">
+        <button class="btnr" id="register" name="register">Register</button>
+        <button class="btnr" id="reset" name="reset">Reset</button>    
+        </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="group8.js"></script>
+    <footer><br><br><CENTER>
+        All rights received &copy; 2022 Front End Web Development - Group 8 &reg;<br>
+        <a href="https:/linkedin.ca" target="_blank">Careers</a> | <a
+        href="https://google.ca" target="_blank">Terms and Conditions</a> | <a href="https:/outlook.office.com" target="_blank"
+        alt="mail">www.gatsbyskitchen.ca</a> | <a href="tel:+16794563421">Call us at: (679) 456-3421</a></CENTER>
+        <br>
+        <br>
+    </footer>
+</body>
+</html>
