@@ -1,0 +1,502 @@
+<html>
+
+<style>
+    .main {
+        width: 1350px;
+        margin: auto;
+        border: 2px solid black;
+        padding: 5px;
+
+
+    }
+
+    .box1 {
+        width: 400px;
+        font-size: 20px;
+        float: left;
+        border: 2px solid black;
+        padding: 5px;
+        margin: auto;
+
+    }
+
+    .box2 {
+        width: 800px;
+        font-size: 20px;
+        float: left;
+        margin-left: 30px;
+        border: 2px solid black;
+        padding: 5px;
+
+    }
+
+    .box1 input[type='text'],
+    textarea,
+    input[type='button'],
+    select {
+        width: 90%;
+        margin: auto;
+        font-size: 17px;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+
+    #BillArea1 {
+        border: 2px solid black;
+        width: 1200px;
+        margin-left: 150px;
+        border-radius: 5px;
+        ;
+        margin-top: 20px;
+        height: 500px;
+    }
+
+    #firmid {
+        text-align: center;
+        margin-left: 10px;
+        color: red;
+        float: left;
+    }
+
+    #firmphone {
+        text-align: center;
+        margin-left: 225px;
+        color: red;
+        float: left;
+    }
+
+
+    #Custinfo {
+        border: none;
+        width: 400px;
+        margin-top: 20px;
+        margin-left: 10px;
+        float: left;
+        height: 200px;
+    }
+
+    #CustDetails {
+        font-size: 25px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    #TotAmt {
+        float: left;
+        border: 2px solid black;
+        width: 300px;
+        margin-bottom: 30px;
+        margin-left: 100px;
+        padding: 10px;
+    }
+
+    #BillArea {
+        border: 2px solid black;
+        width: 1300px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .custDetails {
+
+        float: left;
+
+    }
+
+    .contactDetails {
+        width: 100%;
+        text-align: right;
+
+
+
+    }
+</style>
+
+<body onload="onload();">
+
+    <div class="main" id="mainDiv">
+
+        <div class="box1">
+            <div class="MainCustomer">
+                <h2>Customer Details</h2>
+                <input type="text" placeholder="Enter Name" id="Customer"><br />
+                <span id="errCustomer"></span><br />
+
+                <input type="text" placeholder="Enter Email" id="Email" /><br />
+                <span id="errEmail"></span><br />
+
+                <input type="text" placeholder="Enter Contact" id="Contact" /><br />
+                <span id="errContact"></span><br />
+
+                <textarea type="text" placeholder="Enter Address" id="Address"></textarea>
+                <span id="errAddress"></span><br />
+
+            </div>
+
+
+            <div class="MainProducts">
+                <h2>Product Details</h2>
+                <select id="selectPro" onchange="getrate();">
+
+                </select><br />
+                <span id="errCustomer"></span><br />
+
+                <input type="text" placeholder="Enter Rate" id="ProRate" onchange="getfinalAmt();" readonly><br />
+                <span id="errEmail"></span><br />
+
+                <input type="text" placeholder="Enter Quantity" id="ProQuantity" onchange="getfinalAmt();" /><br />
+                <span id="errQuantity"></span><br />
+
+                <input type="text" placeholder="Enter Tax" id="ProTax" onchange="getfinalAmt();" /><br />
+                <span id="errTax"></span><br />
+
+                <input type="text" placeholder="Total Amount" id="FinalAmount" readonly /><br />
+                <span id="errAmount"></span><br />
+
+                <input type="button" id="btnadd" value="Add to List" onclick="addList();"><br /><br />
+
+                <input type="Button" value="Generate Bill" id="generateBill" onclick="CreateBill();" />
+            </div>
+
+        </div>
+
+        <div class="box2" id="tablebox">
+
+        </div>
+
+
+
+
+
+
+        <div class="clearfix"></div>
+    </div>
+    <br />
+    <div id="BillArea" style="display:none;">
+        <h1 style="text-align:center;"> Bal Car Dealers</h1>
+        <b style="text-align:left;"> Email: BalCars@gmail.com</b>
+        <b style="margin-left:390px;"> Contact:6284780106 </b>
+        <b style="margin-left:290px;"> Address:VPO Balpurian Dist.Gurdaspur</b>
+        <br />
+        <br />
+
+
+        <div class="Details">
+
+            <div class="custDetails">
+                <div id="custTitle" style="font-size: 30px;font-weight: bold;">Name of the Customer</div>
+                <div id="custAddress" style="font-size: 20px;font-weight: bold;">Address of the Customer</div><br />
+
+
+            </div>
+            <div class="contactDetails">
+                <div id="custcontNo">Contact Number</div>
+                <div id="custEmailId">Email</div><br />
+            </div>
+
+
+
+            <div class="clearfix"></div>
+
+            <div class="productlist" id="BillPoductlist">
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="amountDetails">
+                <br />
+
+                <div id="custTax">Final Amount</div>
+                <div id="custFinalAmnt">Final Amount</div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    </div>
+    <div class="clearfix"></div>
+
+
+
+    <script>
+
+        var Cars = new Array("Kia Seltos", "Alcazar", "Venue", "Creta", "Swift Dzire", "Renault Kiger");
+        var Carcost = new Array(1600000, 1400000, 1200000, 1500000, 1000000, 900000);
+
+        var CustNameArray = new Array();
+        var CustCarArray = new Array();
+        var ProRateArray = new Array();
+        var ProQtyArray = new Array();
+        var ProTaxArray = new Array();
+        var ProFinalAmtArray = new Array();
+
+
+        function onload() {
+
+            var selectcar = document.getElementById("selectPro");
+
+            var carList = "<option value='-1'> Select Car</option>";
+
+            for (var x = 0; x <= Cars.length - 1; x++) {
+
+                carList = carList + "<option value=" + x + ">" + Cars[x] + "</option>";
+            }
+
+            selectcar.innerHTML = carList;
+
+        }
+
+
+        function getrate() {
+            var selectcar = document.getElementById("selectPro");
+            var Prorate = document.getElementById("ProRate");
+            var CarRate = 0;
+
+            if (selectcar.value > -1) {
+                CarRate = Carcost[selectcar.value];
+
+                Prorate.value = CarRate;
+
+                getfinalAmt();
+            } else {
+                vanish();
+            }
+
+        }
+
+
+        function getfinalAmt() {
+            var Prorate = document.getElementById("ProRate");
+            var CarQty = document.getElementById("ProQuantity");
+            var CarTax = document.getElementById("ProTax");
+            var CarAmt = document.getElementById("FinalAmount");
+
+            if (Prorate.value.length > 0 && CarQty.value.length > 0 && CarTax.value.length > 0) {
+                var evalRate = eval(Prorate.value);
+                var evalQty = eval(CarQty.value);
+                var evalTax = eval(CarTax.value) / 100;
+
+                var rawAmt = evalRate * evalQty;
+                var rawTax = rawAmt * evalTax;
+                var FinalRate = rawAmt + rawTax;
+
+                CarAmt.value = FinalRate;
+            }
+
+
+
+        }
+
+        function vanish() {
+            var selectcar = document.getElementById("selectPro");
+            var Prorate = document.getElementById("ProRate");
+            var CarQty = document.getElementById("ProQuantity");
+            var CarTax = document.getElementById("ProTax");
+            var CarAmt = document.getElementById("FinalAmount");
+
+            selectcar.value = "";
+            Prorate.value = "";
+            CarQty.value = "";
+            CarTax.value = "";
+            CarAmt.value = "";
+        }
+
+
+        function addList() {
+
+
+
+            var CustName = document.getElementById("Customer");
+            var CustEmail = document.getElementById("Email");
+            var CustContact = document.getElementById("Contact");
+            var CustAddress = document.getElementById("Address");
+            var selectcar = document.getElementById("selectPro");
+            var Prorate = document.getElementById("ProRate");
+            var CarQty = document.getElementById("ProQuantity");
+            var CarTax = document.getElementById("ProTax");
+            var CarAmt = document.getElementById("FinalAmount");
+            var TableData = document.getElementById("tablebox");
+
+            if (CustName.value.length > 0, CustEmail.value.length > 0, CustContact.value.length > 0,
+                CustAddress.value.length > 0, selectcar.value.length > -1, Prorate.value.length > 0,
+                CarQty.value.length > 0, CarTax.value.length > 0, CarAmt.value.length > 0) {
+
+
+                var regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                var resEmail = regexEmail.test(CustEmail.value);
+
+                var regexNumber = /^[0-9]*$/;
+                var resNum = regexNumber.test(CustContact.value);
+
+                var regexName =/^[a-zA-Z]*$/;
+                var resName = regexName.test(CustName.value);
+
+                if (resName == false) {
+                    CustName.style.borderColor = "red";
+                    alert("Enter only Alphabets");
+
+                } else if (resEmail == false) {
+                    CustEmail.style.borderColor = "red";
+                    alert("Enter Valid Email Address");
+
+                } else if (resNum == false) {
+                    CustContact.style.borderColor = "red";
+                    alert("Enter only Numeric Values");
+                } else {
+                    CustName.style.borderColor = "black";
+                    CustEmail.style.borderColor = "black";
+                    CustContact.style.borderColor = "black";
+                    CustNameArray.push(CustName.value);
+                    CustCarArray.push(Cars[selectcar.value]);
+                    ProRateArray.push(ProRate.value);
+                    ProQtyArray.push(CarQty.value);
+                    ProTaxArray.push(CarTax.value);
+                    ProFinalAmtArray.push(CarAmt.value);
+                    GenTable();
+                    vanish();
+                }
+
+
+
+
+
+            } else {
+                alert("Fill All the boxes");
+            }
+
+
+        }
+
+        function CreateBill() {
+            var mainDiv = document.getElementById("mainDiv");
+            var BillArea = document.getElementById("BillArea");
+            var custTitle = document.getElementById("custTitle");
+            var custAddress = document.getElementById("custAddress");
+            var custcontNo = document.getElementById("custcontNo");
+            var custEmailId = document.getElementById("custEmailId");
+
+            var custFinalAmnt = document.getElementById("custFinalAmnt");
+
+            mainDiv.style.display = "none";
+            BillArea.style.display = "block";
+            var CustName = document.getElementById("Customer");
+            var CustEmail = document.getElementById("Email");
+            var CustContact = document.getElementById("Contact");
+            var CustAddress1 = document.getElementById("Address");
+
+
+            custTitle.innerHTML = "Name: " + CustName.value;
+            custAddress.innerHTML = "Address: " + CustAddress1.value;
+            custcontNo.innerHTML = "Contact Number: " + CustContact.value;
+            custEmailId.innerHTML = "Email: " + CustEmail.value;
+
+            GenBillTable();
+
+
+            var TotalAmt = 0;
+            for (y = 0; y <= ProFinalAmtArray.length - 1; y++) {
+                TotalAmt = TotalAmt + eval(ProFinalAmtArray[y]);
+            }
+
+            custFinalAmnt.innerHTML = "Rs." + TotalAmt + "/-";
+
+        }
+
+        function DeleteData(index) {
+            CustCarArray.splice(index, 1);
+            ProRateArray.splice(index, 1);
+            ProQtyArray.splice(index, 1);
+            ProTaxArray.splice(index, 1);
+            ProFinalAmtArray.splice(index, 1);
+
+
+            GenTable();
+        }
+
+        function GenTable() {
+            var TableData = document.getElementById("tablebox");
+            var ProTable = "";
+
+            ProTable = ProTable + "<table border='2' style='width:100%' cellspacing='5' >";
+            ProTable = ProTable + "<tr>";
+
+            ProTable = ProTable + "<th>Car Model</th>";
+            ProTable = ProTable + "<th>Rate</th>";
+            ProTable = ProTable + "<th>Quantity</th>";
+            ProTable = ProTable + "<th>Tax</th>";
+            ProTable = ProTable + "<th>Final Amount</th>";
+            ProTable = ProTable + "<th>Delete</th>";
+            ProTable = ProTable + "</tr>";
+
+            for (var x = 0; x < CustCarArray.length; x++) {
+                ProTable = ProTable + "<tr>";
+
+                ProTable = ProTable + "<td>" + CustCarArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProRateArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProQtyArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProTaxArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProFinalAmtArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + "<button id='delete' onclick='DeleteData(" + x + ");'>Delete Data</button>" + "</td>";
+
+                ProTable = ProTable + "</tr>";
+
+            }
+
+            ProTable = ProTable + "</table>";
+
+            TableData.innerHTML = ProTable;
+
+
+        }
+
+
+        function GenBillTable() {
+            var BillPoductlist = document.getElementById("BillPoductlist");
+            var ProTable = "";
+
+            ProTable = ProTable + "<table border='2' style='width:100%' cellspacing='5' >";
+            ProTable = ProTable + "<tr>";
+
+            ProTable = ProTable + "<th>Car Model</th>";
+            ProTable = ProTable + "<th>Rate</th>";
+            ProTable = ProTable + "<th>Quantity</th>";
+            ProTable = ProTable + "<th>Tax</th>";
+            ProTable = ProTable + "<th>Final Amount</th>";
+
+            ProTable = ProTable + "</tr>";
+
+            for (var x = 0; x < CustCarArray.length; x++) {
+                ProTable = ProTable + "<tr>";
+
+                ProTable = ProTable + "<td>" + CustCarArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProRateArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProQtyArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProTaxArray[x] + "</td>";
+                ProTable = ProTable + "<td>" + ProFinalAmtArray[x] + "</td>";
+
+                ProTable = ProTable + "</tr>";
+
+            }
+
+            ProTable = ProTable + "</table>";
+
+            BillPoductlist.innerHTML = ProTable;
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
