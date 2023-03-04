@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.js">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+
+
+    <title></title>
+</head>
+<body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+
+    <!-- #region Jssor Slider Begin -->
+    <!-- Generator: Jssor Slider Composer -->
+    <!-- Source: https://www.jssor.com/demos/full-width-slider.slider/=edit -->
+    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+              [{b:-1,d:1,ls:0.5},{b:0,d:1000,y:5,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:200,d:1000,y:25,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:400,d:1000,y:45,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:600,d:1000,y:65,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:800,d:1000,y:85,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:500,d:1000,y:195,e:{y:6}}],
+              [{b:0,d:2000,y:30,e:{y:3}}],
+              [{b:-1,d:1,rY:-15,tZ:100},{b:0,d:1500,y:30,o:1,e:{y:3}}],
+              [{b:-1,d:1,rY:-15,tZ:-100},{b:0,d:1500,y:100,o:0.8,e:{y:3}}],
+              [{b:500,d:1500,o:1}],
+              [{b:0,d:1000,y:380,e:{y:6}}],
+              [{b:300,d:1000,x:80,e:{x:6}}],
+              [{b:300,d:1000,x:330,e:{x:6}}],
+              [{b:-1,d:1,r:-110,sX:5,sY:5},{b:0,d:2000,o:1,r:-20,sX:1,sY:1,e:{o:6,r:6,sX:6,sY:6}}],
+              [{b:0,d:600,x:150,o:0.5,e:{x:6}}],
+              [{b:0,d:600,x:1140,o:0.6,e:{x:6}}],
+              [{b:-1,d:1,sX:5,sY:5},{b:600,d:600,o:1,sX:1,sY:1,e:{sX:3,sY:3}}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $LazyLoading: 1,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 20,
+                $SpacingY: 20
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1600;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    
+    <svg viewbox="0 0 0 0" width="0" height="0" style="display:block;position:relative;left:0px;top:0px;">
+        <defs>
+            
+            <filter id="jssor_1_flt_1" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stddeviation="4"></feGaussianBlur>
+            </filter>
+            <radialGradient id="jssor_1_grd_2">
+                <stop offset="0" stop-color="#fff"></stop>
+                <stop offset="1" stop-color="#000"></stop>
+            </radialGradient>
+            <mask id="jssor_1_msk_3">
+                <path fill="url(#jssor_1_grd_2)" d="M600,0L600,400L0,400L0,0Z" x="0" y="0" style="position:absolute;overflow:visible;"></path>
+            </mask>
+        </defs>
+    </svg>
+    <div class="navbar">
+        <div class="content" >
+            <a href="#" class="link">Home</a>
+            <a href="about.html" class="link">AboutUs</a>
+            
+            <a href="contact.html" class="link">ContactUs</a>
+            <a href="#" class="link">Services</a>
+        </div>
+
+        <div class="searchbox ">
+            <input type="text" id="search" placeholder="Search Here">
+            <input type="button" id="searchBtn" value="Search">
+
+        </div>
+         
+      </div>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:600px;overflow:hidden;visibility:hidden;">
+
+
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:700px;overflow:hidden;">
+            <div style="background-color:#d3890e;">
+                <img data-u="image" style="opacity:0.8;" data-src="img/pb-beer-1513436-1600.jpg" />
+                <div data-ts="flat" data-p="275" data-po="40% 50%" style="left:150px;top:40px;width:800px;height:300px;position:absolute;">
+                    <div data-to="50% 50%" data-t="0" style="left:50px;top:520px;width:400px;height:100px;position:absolute;color:#f0a329;font-family:'Roboto Condensed',sans-serif;font-size:64px;font-weight:800;letter-spacing:0.5em;">Plan</div>
+                    <div data-to="50% 50%" data-t="1" style="left:50px;top:540px;width:400px;height:100px;position:absolute;opacity:0.5;color:#f0a329;font-family:'Roboto Condensed',sans-serif;font-size:64px;font-weight:800;letter-spacing:0.5em;">Plan</div>
+                    <div data-to="50% 50%" data-t="2" style="left:50px;top:560px;width:400px;height:100px;position:absolute;opacity:0.25;color:#f0a329;font-family:'Roboto Condensed',sans-serif;font-size:64px;font-weight:800;letter-spacing:0.5em;">Plan</div>
+
+                    <div data-to="50% 50%" data-t="5" style="left:50px;top:500px;width:700px;height:100px;position:absolute;color:#f0a329;font-family:'Roboto Condensed',sans-serif;font-size:64px;font-weight:900;letter-spacing:0.5em;">your Trip</div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" data-src="img/px-apartment-chairs-contemporary-2015560-1600.jpg" />
+                <div data-ts="flat" data-p="540" data-po="40% 50%" style="left:0px;top:0px;width:1600px;height:700px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:350px;top:360px;width:900px;height:500px;position:absolute;">
+                        <svg viewbox="0 0 800 60" data-to="50% 50%" width="800" height="60" data-t="7" style="left:0px;top:-70px;display:block;position:absolute;opacity:0;font-family:'Roboto Condensed',sans-serif;font-size:60px;font-weight:700;letter-spacing:0.05em;overflow:visible;">
+                            <text fill="#454447" stroke="#ff9500" stroke-width="2" text-anchor="middle" x="400" y="60">Best Experience
+                            </text>
+                        </svg>
+                        <div data-to="50% 50%" data-t="8" style="filter:url('#jssor_1_flt_1');left:200px;top:0px;width:600px;height:60px;position:absolute;opacity:0;color:#C49D8F;font-family:Roboto Condensed, sans-serif;font-size:48px;line-height:1.2;letter-spacing:0.1em;text-align:center;">Enjoy your Leisure Time</div>
+                        <svg viewbox="0 0 800 100" width="800" height="100" data-t="9" style="left:40px;top:250px;display:block;position:absolute;opacity:0;font-family:'Roboto Condensed',sans-serif;font-size:100px;font-weight:900;letter-spacing:0.5em;overflow:visible;">
+                            <text fill="rgba(255,255,255,0.7)" stroke="#ff9500" text-anchor="middle" x="400" y="100">The Voyagers
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color:#000000;">
+                <img data-u="image" style="opacity:0.8;" data-src="img/px-back-view-boats-couple-2612852-1600.jpg" />
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <svg viewbox="0 0 600 400" data-ts="preserve-3d" width="600" height="400" data-tchd="jssor_1_msk_3" style="left:255px;top:0px;display:block;position:absolute;overflow:visible;">
+                        <g mask="url(#jssor_1_msk_3)">
+                            <path data-to="300px -180px" fill="none" stroke="rgba(250,251,252,0.5)" stroke-width="20" d="M410-350L410-10L190-10L190-350Z" x="190" y="-350" data-t="10" style="position:absolute;overflow:visible;"></path>
+                        </g>
+                    </svg>
+                    <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="11" style="left:-800px;top:78px;display:block;position:absolute;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;overflow:visible;">
+                        <text fill="#fafbfc" text-anchor="middle" x="400" y="72">GULF MEXICO
+                        </text>
+                    </svg>
+                    <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="12" style="left:1600px;top:153px;display:block;position:absolute;font-family:'Roboto Condensed',sans-serif;font-size:60px;font-weight:900;overflow:visible;">
+                        <text fill="#fafbfc" text-anchor="middle" x="400" y="72">ENJOY SAILBOAT
+                        </text>
+                    </svg>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" data-src="img/yamamoto.jpg" />
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <div data-to="50% 50%" data-t="13" style="left:100px;top:-20px;width:800px;height:200px;position:absolute;opacity:0;">
+                        <div style="left:94px;top:35px;width:480px;height:90px;position:absolute;color:rgba(231, 235, 11, 0.932);font-family:'Roboto Condensed',sans-serif;font-size:72px;line-height:1.2;">Make</div>
+                        <div style="left:307px;top:115px;width:400px;height:50px;position:absolute;color:rgba(231, 235, 11, 0.932);font-family:'Roboto Condensed',sans-serif;font-size:42px;line-height:1.1;text-align:center;background-color:rgba(72,77,76,0.5);">Your Moment memorable.</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" data-src="img/wine-1600.jpg" />
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <div data-to="50% 50%" data-t="14" style="left:690px;top:140px;width:600px;height:150px;position:absolute;opacity:0;color:#ffffff;font-family:Georgia,'Times New Roman',Times,serif;font-size:60px;line-height:1.2;letter-spacing:0.1em;">Best Service <br />At the Resonable Price.</div>
+                    <img data-to="50% 50%" data-t="15" style="left:780px;top:350px;width:344px;height:157px;position:absolute;opacity:0;max-width:344px;" data-src="img/wine-atlantic-ocean.png" />
+                    <img data-to="50% 50%" data-t="16" style="left:1330px;top:8px;width:172px;height:131px;position:absolute;opacity:0;max-width:172px;" data-src="img/wine-badge.png" />
+                </div>
+            </div>
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">slider html</a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:12px;height:12px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+
+    <div class="welcome">Welcome</div>
+
+    <div class="clients">
+        <div class="clientinfo1">
+            <div class="info1">
+                <div class="write1">Discover the treasures on your doorstep</div><br/>
+                <div class="write2">Explore the rich history, diverse scenery and cultural 
+                    heritage that’s on <br/>your doorstep when you 
+                    book a UK escorted tour.</div><br/>
+            </div>
+            <div class="info2">
+                <img src="img/h1.jpg" class="photo">
+            </div>
+            
+        </div>
+
+
+        <div class="clientinfo1">
+            <div class="info22">
+                <img src="img/h2.jpg" class="photo">
+            </div>
+            <div class="info1">
+                <div class="write1">There's no better time to write home about home</div><br/>
+                <div class="write2">Our range of coach holidays throughout England, Wales and Scotland
+                     include many that cross over into Ireland and Northern Ireland, so you can tick off
+                      the places you’ve always wanted to visit with expert guidance to unlock the secrets of
+                       each destination. Of course, being familiar 
+                    with the local language and currency is also very useful!</div><br/>
+            </div>
+           
+            
+        </div>
+
+
+        <div class="clientinfo1">
+            <div class="info1">
+                <div class="write1">Our UK Stay & Explore tours</div><br/>
+                <div class="write2">Our Stay and Explore escorted tours are designed for you 
+                    to make the most of your destination. Return to the same base every day - you'll 
+                    stay in just one centrally located hotel. 
+                    Perfect if you don't want to move locations every couple of days!</div><br/>
+            </div>
+            <div class="info2">
+                <img src="img/h3.jpg" class="photo">
+            </div>
+            
+        </div>
+    </div>
+<div class="clearfix"></div>
+<div class="head">
+    Our Clients
+</div>
+    <div class="reviewers">
+
+        <div class="mainbox">
+          <div class="p1">
+              <div class="slide1">
+                <img src="img/g 1.jpg" style="height:280px;width:280px;border-radius: 500px;">
+                <br/>
+                <div id="id">Sunil Gupta</div>
+              </div><br/>
+              <div class="slide2">
+                Great service and good value, utterly reliable, I would highly recommend 
+                Brightsun travel, I always receive a very personal service. 
+              </div>
+          </div>
+      
+          <div class="p1">
+            <div class="slide1">
+              <img src="img/g2.jpg" style="height:280px;width:280px;border-radius: 500px;">
+              <div id="id">Zakeer Shaikh</div>
+            </div><br/>
+            <div class="slide2">
+                Great experience.  Highly recommended for travelling. Around the world 
+                .specialize in package
+                 . Reliable hajj and umrah agent as well.
+            </div>
+          </div>
+          <div class="p1">
+            <div class="slide1">
+              <img src="img/g3.jpg" style="height:280px;width:280px;border-radius: 500px;">
+              <div id="id">Jaswinder Singh</div>
+            </div><br/>
+            <div class="slide2">
+                Great!
+                Super professional and dedicated!
+                As my schedule was not compatible with that of the agency, we handled 
+                everything over the phone and were tireless !!
+            </div>
+          </div>
+          <div class="p1">
+            <div class="slide1">
+              <img src="img/g4.jpg" style="height:280px;width:280px;border-radius: 500px;">
+              <div id="id">Harish Gambhir</div>
+            </div><br/>
+            <div class="slide2">
+              
+                We have just got back from a brilliant trek in the Indian Himalayas organised by KE.  
+                The area is extremely beautiful with fantastic views of snowy peaks, but very 
+                little frequented by western tourists. 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="destination">
+          Travel in Best Countries
+      </div>
+      <div class="lightdiv">
+
+        <a href="travel2/pa1.jpg" data-lightbox="mygallery"><img src="travel/pa1.jpg" ></a>
+        <a href="travel2/pa2.jpg" data-lightbox="mygallery"><img src="travel/pa2.jpg"></a>
+        <a href="travel2/pa3.jpg" data-lightbox="mygallery"><img src="travel/pa3.jpg"></a>
+
+        <a href="travel2/pa4.jpg" data-lightbox="mygallery"><img src="travel/pa4.jpg" ></a>
+        <a href="travel2/pa5.jpg" data-lightbox="mygallery"><img src="travel/pa5.jpg"></a>
+        <a href="travel2/pa6.jpg" data-lightbox="mygallery"><img src="travel/pa6.jpg"></a>    
+        
+      </div>
+      
+
+      
+<div class="ll7">
+            
+    <div class="ll8">
+         <p class="ll9">Contact Us</p>
+         <div class="mm">
+             <img src="img/1.png" style="height:30px;width:25px;float:left;">
+             <p class="mm1">5775 Yonge St Suite 600, Canada</p>
+         </div>
+  
+         
+            
+            <div class="mm">
+                <img src="img/2.png" style="height:30px;width:25px;float:left;">
+                <p class="mm1">Phone:( +14872901 )</p>
+            </div>
+  
+  
+  
+            <div class="mm">
+                <img src="img/3.png" style="height:25px;width:40px;float:left;">
+                <p class="mm1">Email: YongeStSuite@gmail.com</p>
+            </div>
+  
+            <div class="mm4">
+                  <a href="https://www.facebook.com/facebook"> <img src="img/fb.png" style="float:left;"></a>
+                   <a href="https://twitter.com/Facebook"><img src="img/tw.png" style="margin-left:10px;float:left;"></a>
+                  <a href="https://www.linkedin.com/company/linkedin"> <img src="img/lin(2).png" style="margin-left:10px;float:left;"></a>
+                  <a href="https://business.instagram.com/"> <img src="img/instagram.png" style="margin-left:10px;height:30px;width:30px;float:left;"></a>
+  
+            </div>
+  
+  
+    </div>
+  
+    <div class="nn">
+        <p class="ll9">Get In Touch</p>
+  
+        <input type="text" class="nn3" placeholder=&nbsp;&nbsp;&nbsp;Name >
+        <input type="text" class="nn4" placeholder=&nbsp;&nbsp;&nbsp;Phone>
+        <input type="text" class="nn4" placeholder=&nbsp;&nbsp;&nbsp;Email>
+        <input type="text" class="nn5" placeholder=&nbsp;&nbsp;&nbsp;Message>
+            
+        <button class="nn6">Send</button> 
+    </div>
+  
+    
+  
+  </div>
+  
+
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
+    <!-- #endregion Jssor Slider End -->
+</body>
+</html>
