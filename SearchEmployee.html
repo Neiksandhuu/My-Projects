@@ -1,0 +1,187 @@
+<style>
+    .main {
+        border: 2px solid black;
+        width: 940px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .DataArea {
+        border: 2px solid black;
+        width: 400px;
+        padding: 10px;
+        float: left;
+    }
+
+    input[type="text"],
+    input[type="button"] {
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    #searchArea {
+        border: 2px solid black;
+        margin-left: 20px;
+        width: 50%;
+        padding: 10px;
+        float: left;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="DataArea">
+            <input type="text" placeholder="Enter Name" id="EmpName" /><br />
+            <input type="text" placeholder="Enter Contact" id="EmpContact" /><br />
+            <input type="button" value="Add Data" onclick="AddValue();" />
+
+        </div>
+
+
+        <div id="searchArea">
+            <input type="text" placeholder="Search By Name" id="SearchName" /><br />
+            <input type="text" placeholder="Search By Contact" id="SearchContact" /><br />
+            <input type="button" value="search" onclick="Search();" />
+        </div>
+        <div class="clearfix"></div>
+
+        <div id="TableArea">
+
+        </div>
+    </div>
+
+
+</body>
+
+
+<script>
+    var ArrayName = [];
+    var ArrayContact = [];
+
+    function AddValue() {
+
+        var EmpName = document.getElementById("EmpName");
+        var EmpContact = document.getElementById("EmpContact");
+        var err = 0;
+
+        if (EmpName.value.length > 0 && EmpContact.value.length > 0) {
+
+            if (ArrayContact.length == 0) {
+                ArrayName.push(EmpName.value);
+                ArrayContact.push(EmpContact.value);
+
+                alert("Value Added");
+                GenerateTbl();
+            } else {
+                err = 0;
+
+                for (var x = 0; x <= ArrayContact.length - 1; x++) {
+
+                    if (EmpContact.value == ArrayContact[x]) {
+                        err++;
+                        x = ArrayContact.length + 1;
+                    }
+
+                }
+
+                if (err == 0) {
+                    ArrayName.push(EmpName.value);
+                    ArrayContact.push(EmpContact.value);
+                    alert("Value Added");
+                    GenerateTbl();
+                } else {
+
+                    alert("This Value Already Exists");
+                }
+               
+            }
+        }
+
+    }
+
+
+
+    function Search() {
+        var SearchName = document.getElementById("SearchName");
+        var SearchContact = document.getElementById("SearchContact");
+        var TableArea = document.getElementById("TableArea");
+
+
+        var table = ""
+
+        table = table + "<table border='2' style='width:100%; margin-top:10px;' cellspacing='5'>";
+        table = table + "<tr>";
+        table = table + "<th>Name</th>";
+        table = table + "<th>Contact</th>";
+        table = table + "<th>Delete Info</th>";
+        table = table + "</tr>";
+
+        for (var x = 0; x <= ArrayName.length; x++) {
+            if (SearchName.value == ArrayName[x]) {
+
+                table = table + "<tr>";
+                table = table + "<td>" + ArrayName[x] + "</td>";
+                table = table + "<td>" + ArrayContact[x] + "</td>";
+                table = table + "<td>" + "<input type='button' value='Delete' onclick='DeleteValue(" + x + ");'>" + "</td>";
+                table = table + "</tr>";
+            } else if (SearchContact.value == ArrayContact[x]) {
+
+                table = table + "<tr>";
+                table = table + "<td>" + ArrayName[x] + "</td>";
+                table = table + "<td>" + ArrayContact[x] + "</td>";
+                table = table + "<td>" + "<input type='button' value='Delete' onclick='DeleteValue(" + x + ");'>" + "</td>";
+                table = table + "</tr>";
+            }
+
+        }
+
+        table = table + "</table>";
+        TableArea.innerHTML = table;
+
+
+    }
+
+    function DeleteValue(index) {
+        ArrayName.splice(index, 1);
+        ArrayContact.splice(index, 1);
+
+        Search();
+        GenerateTbl();
+    }
+
+    function GenerateTbl() {
+
+        var TableArea2 = document.getElementById("TableArea");
+
+        var table = ""
+
+        table = table + "<table border='2' style='width:100%; margin-top:10px;' cellspacing='5'>";
+        table = table + "<tr>";
+        table = table + "<th>Name</th>";
+        table = table + "<th>Contact</th>";
+        table = table + "<th>Delete Info</th>";
+        table = table + "</tr>";
+
+        for (var y = 0; y <= ArrayName.length - 1; y++) {
+
+            table = table + "<tr>";
+            table = table + "<td>" + ArrayName[y] + "</td>";
+            table = table + "<td>" + ArrayContact[y] + "</td>";
+            table = table + "<td>" + "<input type='button' value='Delete' onclick='DeleteValue(" + y + ");'>" + "</td>";
+            table = table + "</tr>";
+
+
+        }
+
+        table = table + "</table>";
+        TableArea2.innerHTML = table;
+
+    }
+
+
+</script>

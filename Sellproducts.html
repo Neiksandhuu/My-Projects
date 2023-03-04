@@ -1,0 +1,123 @@
+<style>
+    #addData{
+        border:3px solid grey;
+        width:400px;
+        padding:10px;
+        margin:10px;
+        float:left;
+        font-size: 20px;
+    }
+
+    #selproducts{
+        width:100%;
+        font-size: 23px;
+    }
+
+    input{
+        width:100%;
+        font-size: 20px;
+    }
+
+    #showvalue{
+        border:3px solid grey;
+        padding:10px;
+        float:left;
+        width:600px;
+        margin:20px;
+    }
+</style>
+<script>
+   var Products=["Kia Seltos","Vitara Brezza","Swift Dzire","Lambourgini"];
+   var PRIZE=[1400000,950000,900000,1200000];
+   var listProducts=[];
+   var listPrice=[];
+   var listQty=[];
+   var listTotal=[];
+
+   function loadData(){
+          
+          var selProducts=document.getElementById("selProducts");
+       ct="";
+       for(var x=0;x<=Products.length-1;x++){
+           ct=ct+"<option>"+Products[x]+"</option>";
+       }
+       selProducts.innerHTML=ct;
+
+   }
+
+   function carPrice(){
+
+      var txtPrice=document.getElementById("txtPrice");
+
+      var idx=Products.indexOf(selProducts.value);
+
+      txtPrice.value=PRIZE[idx];
+
+   }
+
+   function neik(){
+
+       var txtPrice=document.getElementById("txtPrice");
+       var txtQty=document.getElementById("txtQty");
+       var txtTotal=document.getElementById("txtTotal");
+
+       listProducts.push(selProducts.value);
+       listPrice.push(txtPrice.value);
+       listQty.push(txtQty.value);
+
+       var Total=eval(txtPrice.value)*eval(txtQty.value);
+
+       txtTotal.value=Total;
+
+       listTotal.push(txtTotal.value);
+
+       var data="";
+
+       data=data+"<tr>";
+        data=data+"<th>Cars</th>";
+        data=data+"<th>Price</th>";
+        data=data+"<th>Quantity</th>";
+        data=data+"<th>Total</th>";
+        data=data+"</tr>";
+
+      for(var x=0;x<=listProducts.length-1;x++){
+        data=data+"<tr>";
+        data=data+"<td>"+listProducts[x]+"</td>";
+        data=data+"<td>"+listPrice[x]+"</td>";
+        data=data+"<td>"+listQty[x]+"</td>";
+        data=data+"<td>"+listTotal[x]+"</td>";
+        data=data+"</tr>";
+         
+
+      }
+
+      var tbl=document.getElementById("tbl");
+
+      tbl.innerHTML=data;
+    
+   }
+
+</script>
+<body onload="loadData();">
+
+    <div id="addData">
+    <select id="selProducts" onchange="carPrice();"></select>
+    <hr/>
+    Maximum Retail Price<br/><br/>
+    <input type="text" placeholder="Enter the car Price" id="txtPrice" readonly><hr/>
+    <input type="text" placeholder="Enter the car Quantity" id="txtQty"><hr/>
+    <input type="text" placeholder="Total Cost" id="txtTotal" readonly><hr/>
+    <button onclick="neik();">Click Here</button>
+       </div>
+
+       <div id="showvalue">
+           <table border="3" width=100% id="tbl">
+
+           </table>
+
+       </div>
+   
+
+    
+
+</body>

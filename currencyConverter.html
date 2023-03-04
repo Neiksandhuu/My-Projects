@@ -1,0 +1,111 @@
+<style>
+    h1{
+        font-size:30px;
+        text-align: center;
+        color:red;
+        background-color: black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #neik{
+        border:2px solid black;
+        width:400px;
+        padding:10px;
+        font-size: 20px;
+}
+#curr{
+    width:100%;
+    font-size: 24px;
+
+}
+input{
+    width:100%;
+    font-size: 20px;
+}
+#rate{
+    font-size:18px;
+
+}
+</style>
+<script>
+     var Currency=["Indian rupee INR","Canadian dollar CAD","United States dollar USD","Qatari riyal QAR","Euro EUR","Chinese yuan CNY","Australian dollar AUD","Japanese yen JPY","New Zealand dollar NZD","Singapore dollar SGD"];
+     var Rate=[1,60.32,74.09,20.35,89,11.5,57.179,0.678,53.06,55.7];
+     var EntAmount=[];
+     var TotAmount=[];
+
+
+    function loadData1(){
+      var curr=document.getElementById("curr");
+
+      var show="";
+      for(x=0;x<=Currency.length-1;x++){
+          show=show+"<option>"+Currency[x]+"</option>";
+      }
+      curr.innerHTML=show;
+    }
+
+
+   function Rates1(){
+       var currRate=document.getElementById("currRate");
+       var rate=document.getElementById("rate");
+
+       var idx=Currency.indexOf(curr.value);
+
+       currRate.value=Rate[idx];
+       rate.innerHTML=Rate[idx];
+   }
+
+   function Calculate1(){
+       var Amount=document.getElementById("Amount");
+       var Total=document.getElementById("Total");
+
+       EntAmount.push(Amount.value);
+
+       var Tot=eval(currRate.value)*eval(Amount.value);
+
+       Total.value=Tot;
+
+       TotAmount.push(Total.value);
+
+
+
+   }
+
+   function Calculate(){
+       Calculate1();
+   }
+
+   function loadData(){
+       loadData1();
+   }
+
+   function Rates(){
+       Rates1();
+   }
+
+
+
+</script>
+<body onload="loadData();">
+    <h1>Currency Converter</h1>
+<div id="neik">
+    <select id="curr" onchange="Rates();">
+
+    </select>
+    <hr/>
+    Curreny Rate:<h3 id="rate"></h3><hr/>
+    <input type="text" placeholder="Currency Rate" id="currRate" readonly><hr/>
+    <input type="text" placeholder="Enter Amount " id="Amount"><hr/>
+    Indian Value:
+    <input type="text" placeholder="Total" id="Total" readonly><hr/>
+
+    <button onclick="Calculate();">Click Here</button>
+
+
+</div>
+</body>
+
+
+
+
+
+

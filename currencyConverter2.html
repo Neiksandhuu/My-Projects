@@ -1,0 +1,293 @@
+<style>
+        h1{
+            font-size:30px;
+            text-align: center;
+            color:red;
+            background-color: black;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        div{
+            border:2px solid white;
+            width:500px;
+            padding:10px;
+            float: left;
+            color:white;
+            font-size: 20px;
+            margin-left:150px;
+            position: relative;
+            margin-top:30px;
+          
+    }
+    select{
+        width:100%;
+        font-size: 24px;
+    
+    }
+    input{
+        width:100%;
+        font-size: 20px;
+    }
+    h3{
+        font-size:18px;
+        color:white;
+    
+    }
+   #armaan{
+      border:3px solid red;
+      margin-left:490px;
+      padding:10px;
+    }
+    
+    
+    input{
+        width:100%;
+        font-size: 20px;
+    }
+    
+    </style>
+    <script>
+    
+        
+         var Currency=["Indian rupee INR","Canadian dollar CAD","United States dollar USD","Qatari riyal QAR","Euro EUR","Chinese yuan CNY","Australian dollar AUD","Japanese yen JPY","New Zealand dollar NZD","Singapore dollar SGD"];
+         var Rate=[1,60.32,74.09,20.35,89,11.5,57.179,0.678,53.06,55.7];
+         var EntAmount=[];
+         var TotAmount=[];
+         var Getvalue=[];
+
+         function Armaan(){
+                var bijj=document.getElementById("bijj");
+
+                var currRate=document.getElementById("currRate");
+                var currRate1=document.getElementById("currRate1");
+                var currRate2=document.getElementById("currRate2");
+                var currRate3=document.getElementById("currRate3");
+
+
+                var Total=document.getElementById("Total");
+                var Total1=document.getElementById("Total1");
+                var Total2=document.getElementById("Total2");
+                var Total3=document.getElementById("Total3");
+
+                var Amount=document.getElementById("Amount");
+                var Amount1=document.getElementById("Amount1");
+                var Amount2=document.getElementById("Amount2");
+                var Amount3=document.getElementById("Amount3");
+
+
+                
+
+
+         
+         Getvalue.push(bijj.value);
+         Amount.value=bijj.value;
+         Amount1.value=bijj.value;
+         Amount2.value=bijj.value;
+         Amount3.value=bijj.value;
+
+
+         Total.value=eval(currRate.value)*eval(bijj.value);
+         Total1.value=eval(currRate1.value)*eval(bijj.value);
+         Total2.value=eval(currRate2.value)*eval(bijj.value);
+         Total3.value=eval(currRate3.value)*eval(bijj.value);
+
+                
+
+         }
+         
+       
+    
+        function loadData(){
+            var curr=document.getElementById("curr");
+         var curr1=document.getElementById("curr1");
+         var curr2=document.getElementById("curr2");
+         var curr3=document.getElementById("curr3");
+
+
+         var show="";
+          for(x=0;x<=Currency.length-1;x++){
+              show=show+"<option>"+Currency[x]+"</option>";
+          }
+          curr.innerHTML=show;
+          curr1.innerHTML=show;
+          curr2.innerHTML=show;
+          curr3.innerHTML=show;
+
+
+          
+           }
+    
+    
+       function Rates(){
+
+            var currRate=document.getElementById("currRate");
+         var rate=document.getElementById("rate");
+         
+           var idx=Currency.indexOf(curr.value);
+           currRate.value=Rate[idx];
+           rate.innerHTML=Rate[idx];
+
+        }
+
+       function Rates1(){
+
+            var currRate1=document.getElementById("currRate1");
+         var rate1=document.getElementById("rate1");
+          
+           var idx1=Currency.indexOf(curr1.value);
+           currRate1.value=Rate[idx1];
+           rate1.innerHTML=Rate[idx1];
+    
+        }
+
+         function Rates2(){
+
+        var currRate2=document.getElementById("currRate2");
+         var rate2=document.getElementById("rate2");
+
+        var idx2=Currency.indexOf(curr2.value);
+       currRate2.value=Rate[idx2];
+        rate2.innerHTML=Rate[idx2];
+
+}
+
+ function Rates3(){
+
+var currRate3=document.getElementById("currRate3");
+ var rate3=document.getElementById("rate3");
+
+var idx3=Currency.indexOf(curr3.value);
+currRate3.value=Rate[idx3];
+rate3.innerHTML=Rate[idx3];
+
+}
+    
+       function Calculate(){
+
+            var Amount=document.getElementById("Amount");
+         var Total=document.getElementById("Total");
+           EntAmount.push(Amount.value);
+           var Tot=eval(currRate.value)*eval(Amount.value);
+           Total.value=Tot;
+           TotAmount.push(Total.value);
+    
+    }
+
+     function Calculate1(){
+        var Amount1=document.getElementById("Amount1");
+         var Total1=document.getElementById("Total1");
+           
+           EntAmount.push(Amount1.value);
+           var Tot1=eval(currRate1.value)*eval(Amount1.value);
+           Total1.value=Tot1;
+           TotAmount.push(Total1.value);
+    
+    }
+
+     
+
+     function Calculate2(){
+        var Amount2=document.getElementById("Amount2");
+         var Total2=document.getElementById("Total2");
+           
+           EntAmount.push(Amount2.value);
+           var Tot2=eval(currRate2.value)*eval(Amount2.value);
+           Total2.value=Tot2;
+           TotAmount.push(Total2.value);
+    
+    }
+    
+    function Calculate3(){
+        var Amount3=document.getElementById("Amount3");
+         var Total3=document.getElementById("Total3");
+           
+           EntAmount.push(Amount3.value);
+           var Tot3=eval(currRate3.value)*eval(Amount3.value);
+           Total1.value=Tot3;
+           TotAmount.push(Total3.value);
+    
+    }
+      
+    
+    
+    
+    </script>
+    <body onload="loadData();" style="background-color: black;">
+        <h1>Currency Converter</h1>
+      <div id="armaan">
+          <h3>Enter value if want to compare different Rates.</h3>
+          <input type="text" placeholder="Enter value that u want to reveal in all Boxes" id="bijj"><br/><br/>
+          <button onclick="Armaan();">Click Here</button>
+      </div>
+    <div id="neik">
+        <select id="curr" onchange="Rates();">
+    
+        </select>
+        <hr/>
+        Curreny Rate:<hr/>
+        <input type="text" placeholder="Currency Rate" id="currRate" readonly><hr/>
+        <input type="text" placeholder="Enter Amount " id="Amount"><hr/>
+        Indian Value:
+        <input type="text" placeholder="Total" id="Total" readonly><hr/>
+    
+        <button onclick="Calculate();">Click Here</button>
+    
+    
+    </div>
+
+    <div id="neik1">
+        <select id="curr1" onchange="Rates1();">
+    
+        </select>
+        <hr/>
+        Curreny Rate: <hr/>
+        <input type="text" placeholder="Currency Rate" id="currRate1" readonly><hr/>
+        <input type="text" placeholder="Enter Amount " id="Amount1"><hr/>
+        Indian Value:
+        <input type="text" placeholder="Total" id="Total1" readonly><hr/>
+    
+        <button onclick="Calculate1();">Click Here</button>
+    
+    
+    </div>
+
+    <div id="neik2">
+        <select id="curr2" onchange="Rates2();">
+    
+        </select>
+        <hr/>
+        Curreny Rate: <hr/>
+        <input type="text" placeholder="Currency Rate" id="currRate2" readonly><hr/>
+        <input type="text" placeholder="Enter Amount " id="Amount2"><hr/>
+        Indian Value:
+        <input type="text" placeholder="Total" id="Total2" readonly><hr/>
+    
+        <button onclick="Calculate2();">Click Here</button>
+    
+    
+    </div>
+
+    <div id="neik3">
+        <select id="curr3" onchange="Rates3();">
+    
+        </select>
+        <hr/>
+        Curreny Rate: <hr/>
+        <input type="text" placeholder="Currency Rate" id="currRate3" readonly><hr/>
+        <input type="text" placeholder="Enter Amount " id="Amount3"><hr/>
+        Indian Value:
+        <input type="text" placeholder="Total" id="Total3" readonly><hr/>
+    
+        <button onclick="Calculate3();">Click Here</button>
+    
+    
+    </div>
+    </body>
+    
+   
+    
+    
+    
+    
+    
+    
+    
